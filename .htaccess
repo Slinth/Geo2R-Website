@@ -8,3 +8,16 @@
 </IfModule>
 
 # END Cleaning URLs
+
+# BEGIN Redirection
+Redirect 301 /nos-drones http://geo2r.com/presentation/materiel
+#Redirect 301 /presentation/societe http://geo2r.com/presentation
+#Redirect 301 /presentation/materiels http://geo2r.com/presentation
+#Redirect 301 /presentation/reglementation http://geo2r.com/presentation
+#Redirect 301 /formulaire-de-devis http://geo2r.com/contact
+#Redirect 301 /blog-nord-pas-de-calais-picardie http://geo2r.com/actualites
+#Redirect 301 /batiments-travaux-publics/40-integration-3d#ancre http://geo2r.com/services/integration3d
+
+
+
+# END Redirection
