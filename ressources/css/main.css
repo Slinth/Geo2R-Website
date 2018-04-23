@@ -4,35 +4,32 @@
   --main-light-orange: #f9ae85;
 }
 
-.wrapper {
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-}
-
-.container {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 html {
   position: relative;
-  min-height: 100%;
+  height: 100%;
 }
 body {
   width: 100%;
-  margin-bottom: 15rem;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 /****** FOOTER ******/
 .footer {
-  position: absolute;
-  bottom: 0;
+  flex-shrink: 0;
   width: 100%;
   height: auto;
-  margin-top:-15rem;
-  line-height: 15rem;
   background-color: var(--main-dark);
   line-height: 4rem;
   text-align: center;
@@ -85,7 +82,7 @@ body {
 
 .footer p {
   background-color: var(--main-orange);
-  color: white;
+  color: green;
   border: solid 1px var(--main-orange);
   border-radius: 5px;
   line-height: 1.5em;
@@ -95,17 +92,18 @@ body {
 
 .footer p.left {
   margin-left: 5em;
-  margin-right: 15em;
+  margin-right: 10em;
 }
 
 .footer p.right {
-  margin-left: 15em;
+  margin-left: 10em;
   margin-right: 5em;
 }
 
 .legals {
   font-size: 0.8rem;
   color: #808080;
+  line-height: 2rem;
 }
 /****** HEADER ******/
 
@@ -127,22 +125,6 @@ body {
   padding-right: 3em;
 }
 
-/* ----------------------------Design page Contact ------------------------------------ */
-.test {
-  padding-left: 12em;
-}
-
-.logo {
-  position: absolute;
-  top: 0px;
-  margin-left: 3rem;
-  margin-right: 1rem;
-  margin-top: 0.3rem;
-  height: 5rem;
-  width: auto;
-}
-/* ----------------------------------------------------------------------------------------- */
-
 .nav-item {
   margin-left: 1em;
   margin-right: 1em;
@@ -158,44 +140,6 @@ body {
 
 .navbar-title {
     display: none;
-}
-
-@media screen and (max-width: 1023px) {
-  .navbar-media {
-      display: none !important;
-  }
-
-  .navbar-title {
-      display: inline !important;
-  }
-
-  /* Design page Contact */
-  .test{
-    padding-left: 3em;
-  }
-
-  .test2 {
-    margin-left: 31em;
-  }
-
-  .test3 {
-    margin-top: 3em !important;
-    margin-bottom: 1em !important;
-  }
-
-  .logo {
-    margin-left: 2em !important;
-  }
-
-  /* Design page Cartographie */
-  .justify-content-md-center {
-    margin-top: 2em;
-    margin-bottom: 1em;
-  }
-
-  .navbar-brand {
-    margin-left: 0 !important;
-  }
 }
 
 .navbar-media {
@@ -299,4 +243,199 @@ body {
     content: "";
     height: 5em;
     margin: -5em 0 0;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .justify-content-md-center {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .navbar-brand {
+    margin-left: 0 !important;
+  }
+
+  .footer img {
+    padding-top: 1em;
+    width: auto;
+    height: 10rem;
+  }
+
+  .footer .content ul.left {
+    margin-left: 3em;
+    text-align: left;
+    padding-left: 1em;
+    border-left: 2px solid var(--main-orange);
+  }
+
+  .footer .content ul.right {
+    margin-right: 3em;
+    text-align: right;
+    padding-right: 1em;
+    border-right: 2px solid var(--main-orange);
+  }
+
+  .footer p {
+    background-color: var(--main-orange);
+    color: red;
+    border: solid 1px var(--main-orange);
+    border-radius: 5px;
+    line-height: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .footer p.left {
+    margin-left: 3em !important;
+    margin-right: 6em !important;
+  }
+
+  .footer p.right {
+    margin-left: 6em !important;
+    margin-right: 3em !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .justify-content-md-center {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .navbar-brand {
+    margin-left: 0 !important;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    font-size: 0.9rem;
+   }
+
+  .footer img {
+    margin-top: 2em;
+    width: auto;
+    height: 8rem;
+  }
+
+  .footer .content ul.left {
+    margin-left: 3em;
+    text-align: left;
+    padding-left: 1em;
+    border-left: 2px solid var(--main-orange);
+  }
+
+  .footer .content ul.right {
+    margin-right: 3em;
+    text-align: right;
+    padding-right: 1em;
+    border-right: 2px solid var(--main-orange);
+  }
+
+  .footer p {
+    background-color: var(--main-orange);
+    color: blue;
+    border: solid 1px var(--main-orange);
+    border-radius: 5px;
+    line-height: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .footer p.left {
+    margin-left: 3em !important;
+    margin-right: 6em !important;
+  }
+
+  .footer p.right {
+    margin-left: 6em !important;
+    margin-right: 3em !important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .navbar-media {
+    display: none !important;
+  }
+
+  .justify-content-md-center {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .navbar-brand {
+    margin-left: 0 !important;
+  }
+
+  .footer img {
+    margin-top: 2em;
+    width: auto;
+    height: 7.5rem;
+  }
+
+  .footer .content ul.left {
+    margin-left: 2em;
+    text-align: left;
+    padding-left: 1em;
+    border-left: 2px solid var(--main-orange);
+  }
+
+  .footer .content ul.right {
+    margin-right: 2em;
+    text-align: right;
+    padding-right: 1em;
+    border-right: 2px solid var(--main-orange);
+  }
+
+  .footer p {
+    color: yellow;
+    font-size: 0.9rem;
+  }
+
+  .footer p.left {
+    margin-left: 2em !important;
+    margin-right: 4em !important;
+  }
+
+  .footer p.right {
+    margin-left: 4em !important;
+    margin-right: 2em !important;
+  }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 768px) {
+  .navbar-media {
+    display: none !important;
+  }
+
+  .justify-content-md-center {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .navbar-brand {
+    margin-left: 0 !important;
+  }
+
+  .footer img {
+    display: none !important;
+  }
+
+  .footer .content ul {
+    margin-left: 2em !important;
+    text-align: left !important;
+    padding-left: 1em;
+    border-left: 2px solid var(--main-orange);
+    border-right: 0px solid var(--main-orange) !important;
+  }
+
+  .footer p {
+    background-color: var(--main-orange);
+    color: pink;
+    border: solid 1px var(--main-orange);
+    border-radius: 5px;
+    line-height: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }

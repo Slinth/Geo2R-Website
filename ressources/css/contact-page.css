@@ -1,0 +1,216 @@
+/** Content PAGE CONTACT */
+.container {
+  overflow: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.middle-bar {
+  border-left: solid 1px var(--main-orange);
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+iframe {
+  width: 28em;
+  height: 19em;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  font-weight: 500;
+  line-height: 3rem;
+  color: var(--main-orange);
+}
+
+.container ul {
+  list-style: none;
+  padding-left: 6em;
+  padding-right: 0;
+}
+
+.container ul li {
+  line-height: 2em;
+  font-size: 0.9em;
+}
+
+.icone {
+  width: 2em;
+  height: auto;
+  margin-right: 1em;
+}
+
+.center-content {
+  width: 100%;
+  float: left;
+  margin-top: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.center-content .col-lg-4.cross-bar, .col-md-4.cross-bar {
+  border-top: solid 1px var(--main-orange);
+  margin-top: 1.5em;
+}
+
+.center-content .form-row {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.center-content p {
+  text-align: center;
+}
+
+.center-content .btn-orange {
+  margin-top: 1.5em;
+  background-color: var(--main-orange);
+  color: white;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  iframe {
+    width: 25em;
+    height: 17em;
+  }
+
+  ul {
+    padding-left: 4em !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  iframe {
+    width: 22em;
+    height: 15em;
+  }
+
+  ul {
+    padding-left: 4em !important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  iframe {
+    width: 19em;
+    height: 12.5em;
+  }
+
+  ul {
+    padding-left: 4em !important;
+  }
+
+  .center-content {
+    margin-top: 1em !important;
+  }
+
+  .middle-bar {
+    border-left: solid 1px var(--main-orange);
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .icone {
+    width: 1.5em;
+    height: auto;
+    margin-right: 0.5em;
+  }
+
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  iframe {
+    width: 19em;
+    height: 12.5em;
+  }
+
+  ul {
+    padding-left: 6em !important;
+  }
+
+  .center-content {
+    margin-top: 1em !important;
+  }
+
+  .cross-bar {
+    border-top: 0px !important;
+  }
+
+  .middle-bar {
+    border-left: 0px !important;
+  }
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  iframe {
+    width: 17em;
+    height: 11em;
+  }
+
+  .cross-bar {
+    border-top: 0px !important;
+  }
+
+  .middle-bar {
+    border-left: 0px !important;
+  }
+
+  ul {
+    padding-left: 1em !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/** PAS UTILISE */
+.left-content {
+  float: left;
+  width: 50%;
+  padding-right: 3em;
+}
+
+.right-content {
+  float: right;
+  width: 50%;
+  padding-left: 3em;
+  border-left: solid 2px var(--main-orange);
+}
+
+/* ----------------------------Design Menu page Contact ------------------------------------ */
+.test {
+  padding-left: 12em;
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+  margin-left: 3rem;
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+  height: 5rem;
+  width: auto;
+}
+/* ----------------------------------------------------------------------------------------- */
+/** FIN */
