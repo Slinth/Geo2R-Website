@@ -220,7 +220,7 @@ body {
 
 
 /** GESTION NAVIGATION ANCRES PRESENTATION */
-#societe:before {
+#societe:target:before {
     display: block;
     content: "";
     height: 5em;
