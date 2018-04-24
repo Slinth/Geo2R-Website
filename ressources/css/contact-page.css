@@ -1,10 +1,6 @@
 /** Content PAGE CONTACT */
 .container {
   overflow: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding-right: 1.5em;
-  padding-left: 1.5em;
 }
 
 .centered {
@@ -39,12 +35,12 @@ h2 {
 }
 
 .container ul li {
-  line-height: 2em;
+  line-height: 2.3em;
   font-size: 0.9em;
 }
 
 .icone {
-  width: 2em;
+  width: 2.2em;
   height: auto;
   margin-right: 1em;
 }
@@ -143,10 +139,6 @@ h2 {
     margin-top: 1em !important;
   }
 
-  .cross-bar {
-    border-top: 0px !important;
-  }
-
   .middle-bar {
     border-left: 0px !important;
   }
@@ -159,10 +151,6 @@ h2 {
     height: 11em;
   }
 
-  .cross-bar {
-    border-top: 0px !important;
-  }
-
   .middle-bar {
     border-left: 0px !important;
   }
@@ -172,45 +160,3 @@ h2 {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/** PAS UTILISE */
-.left-content {
-  float: left;
-  width: 50%;
-  padding-right: 3em;
-}
-
-.right-content {
-  float: right;
-  width: 50%;
-  padding-left: 3em;
-  border-left: solid 2px var(--main-orange);
-}
-
-/* ----------------------------Design Menu page Contact ------------------------------------ */
-.test {
-  padding-left: 12em;
-}
-
-.logo {
-  position: absolute;
-  top: 0px;
-  margin-left: 3rem;
-  margin-right: 1rem;
-  margin-top: 0.3rem;
-  height: 5rem;
-  width: auto;
-}
-/* ----------------------------------------------------------------------------------------- */
-/** FIN */

@@ -37,3 +37,16 @@ function submitForm() {
     console.log("CHAMPS PAS RENSEIGNES !");
   }
 }
+
+function submitV2() {
+  console.log("DANS LA FNC");
+  var form = document.getElementById('FormContact');
+  console.log(form);
+  form.addEventListener('submit', function(event) {
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+  }, false);
+}

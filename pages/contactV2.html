@@ -99,29 +99,44 @@
               <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
             </div>
 
-            <form>
+            <form class="needs-validation" novalidate id="FormContact">
               <div class="form-row">
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Prénom" id="input-prenom" required>
+                  <input type="text" class="form-control" placeholder="Prénom" id="input-prenom" required>
+                  <div class="invalid-feedback">
+                    Veuillez renseigner ce champ.
+                  </div>
                 </div>
                 <div class="col">
                   <input type="text" class="form-control" placeholder="Nom" id="input-nom" required>
+                  <div class="invalid-feedback">
+                    Veuillez renseigner ce champ.
+                  </div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col">
-                <input type="tel" class="form-control" placeholder="Téléphone" id="input-tel" required>
+                  <input type="tel" class="form-control" placeholder="Téléphone" id="input-tel" required>
+                  <div class="invalid-feedback">
+                    Veuillez renseigner ce champ.
+                  </div>
                 </div>
                 <div class="col">
                   <input type="email" class="form-control" placeholder="Email" id="input-email" required>
+                  <div class="invalid-feedback">
+                    Veuillez renseigner ce champ.
+                  </div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col">
                   <textarea class="form-control" rows="3" placeholder="Message" id="input-message" required></textarea>
+                  <div class="invalid-feedback">
+                    Veuillez renseigner ce champ.
+                  </div>
                 </div>
               </div>
-              <p><button type="submit" class="btn btn-orange">Envoyer</button></p>
+              <p><button type="submit" class="btn btn-orange" onclick="submitV2()">Envoyer</button></p>
             </form>
           </div>
         </div> <!-- /container -->
