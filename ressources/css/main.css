@@ -2,6 +2,7 @@
   --main-dark: #3d3d3d;
   --main-orange: #f4712d;
   --main-light-orange: #f9ae85;
+  --main-black: #212529;
 }
 
 html {
@@ -14,6 +15,11 @@ body {
   flex-direction: column;
 }
 
+video {
+  width: 100%;
+  margin-bottom: -0.5em;
+}
+
 .wrapper {
   flex: 1 0 auto;
 }
@@ -21,8 +27,6 @@ body {
 .container {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 /****** FOOTER ******/
@@ -41,9 +45,9 @@ body {
 }
 
 .footer img {
-  padding-top: 1em;
-  width: auto;
-  height: 10rem;
+  padding-top: 5%;
+  width: 70%;
+  height: auto;
 }
 
 .footer .content {
@@ -57,14 +61,14 @@ body {
 }
 
 .footer .content ul.left {
-  margin-left: 5em;
+  margin-left: 17%;
   text-align: left;
   padding-left: 1em;
   border-left: 2px solid var(--main-orange);
 }
 
 .footer .content ul.right {
-  margin-right: 5em;
+  margin-right: 17%;
   text-align: right;
   padding-right: 1em;
   border-right: 2px solid var(--main-orange);
@@ -82,7 +86,7 @@ body {
 
 .footer p {
   background-color: var(--main-orange);
-  color: green;
+  color: white;
   border: solid 1px var(--main-orange);
   border-radius: 5px;
   line-height: 1.5em;
@@ -91,13 +95,13 @@ body {
 }
 
 .footer p.left {
-  margin-left: 5em;
-  margin-right: 10em;
+  margin-left: 17%;
+  margin-right: 15%;
 }
 
 .footer p.right {
-  margin-left: 10em;
-  margin-right: 5em;
+  margin-left: 15%;
+  margin-right: 17%;
 }
 
 .legals {
@@ -256,43 +260,7 @@ body {
   }
 
   .footer img {
-    padding-top: 1em;
-    width: auto;
-    height: 10rem;
-  }
-
-  .footer .content ul.left {
-    margin-left: 3em;
-    text-align: left;
-    padding-left: 1em;
-    border-left: 2px solid var(--main-orange);
-  }
-
-  .footer .content ul.right {
-    margin-right: 3em;
-    text-align: right;
-    padding-right: 1em;
-    border-right: 2px solid var(--main-orange);
-  }
-
-  .footer p {
-    background-color: var(--main-orange);
-    color: red;
-    border: solid 1px var(--main-orange);
-    border-radius: 5px;
-    line-height: 1.5em;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-  }
-
-  .footer p.left {
-    margin-left: 3em !important;
-    margin-right: 6em !important;
-  }
-
-  .footer p.right {
-    margin-left: 6em !important;
-    margin-right: 3em !important;
+    padding-top: 10%;
   }
 }
 
@@ -310,48 +278,19 @@ body {
     font-size: 0.9rem;
    }
 
-  .footer img {
-    margin-top: 2em;
-    width: auto;
-    height: 8rem;
-  }
-
-  .footer .content ul.left {
-    margin-left: 3em;
-    text-align: left;
-    padding-left: 1em;
-    border-left: 2px solid var(--main-orange);
-  }
-
-  .footer .content ul.right {
-    margin-right: 3em;
-    text-align: right;
-    padding-right: 1em;
-    border-right: 2px solid var(--main-orange);
-  }
-
-  .footer p {
-    background-color: var(--main-orange);
-    color: blue;
-    border: solid 1px var(--main-orange);
-    border-radius: 5px;
-    line-height: 1.5em;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-  }
-
-  .footer p.left {
-    margin-left: 3em !important;
-    margin-right: 6em !important;
-  }
-
-  .footer p.right {
-    margin-left: 6em !important;
-    margin-right: 3em !important;
-  }
+   .footer img {
+     padding-top: 12%;
+   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
+  .container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .navbar-media {
     display: none !important;
   }
@@ -366,38 +305,7 @@ body {
   }
 
   .footer img {
-    margin-top: 2em;
-    width: auto;
-    height: 7.5rem;
-  }
-
-  .footer .content ul.left {
-    margin-left: 2em;
-    text-align: left;
-    padding-left: 1em;
-    border-left: 2px solid var(--main-orange);
-  }
-
-  .footer .content ul.right {
-    margin-right: 2em;
-    text-align: right;
-    padding-right: 1em;
-    border-right: 2px solid var(--main-orange);
-  }
-
-  .footer p {
-    color: yellow;
-    font-size: 0.9rem;
-  }
-
-  .footer p.left {
-    margin-left: 2em !important;
-    margin-right: 4em !important;
-  }
-
-  .footer p.right {
-    margin-left: 4em !important;
-    margin-right: 2em !important;
+    padding-top: 15%;
   }
 }
 
@@ -429,7 +337,7 @@ body {
 
   .footer p {
     background-color: var(--main-orange);
-    color: pink;
+    color: white;
     border: solid 1px var(--main-orange);
     border-radius: 5px;
     line-height: 1.5em;
