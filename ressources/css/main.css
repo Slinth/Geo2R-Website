@@ -3,6 +3,7 @@
   --main-orange: #f4712d;
   --main-light-orange: #f9ae85;
   --main-black: #212529;
+  --main-light-grey: #808080;
 }
 
 html {
@@ -106,8 +107,12 @@ video {
 
 .legals {
   font-size: 0.8rem;
-  color: #808080;
+  color: var(--main-light-grey);
   line-height: 2rem;
+}
+
+.legals a {
+  color: var(--main-light-orange);
 }
 /****** HEADER ******/
 
