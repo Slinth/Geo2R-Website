@@ -27,8 +27,6 @@ h4 {
   font-size: 1rem;
   color: var(--main-black);
   margin: auto;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
 }
 
 
@@ -40,6 +38,7 @@ h4 {
 
 .centered {
   text-align: center;
+  display: inline-block;
 }
 
 .centered p {
@@ -109,6 +108,7 @@ h4 {
 .vertical-align {
   display: flex;
   flex-direction: row;
+  height: 3em;
 }
 
 .vertical-align > [class^="col-"],
