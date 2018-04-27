@@ -2,7 +2,7 @@
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $tel = $_POST['tel'];
-$email = $_POST['email'];
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL); //On accepte que les chaines étant des adresses valides = proctection contre le spam
 $mess = $_POST['message'];
 
 echo htmlspecialchars($nom);
@@ -39,12 +39,12 @@ $boundary_alt = "-----=".md5(rand());
 //==========
 
 //=====Définition du sujet.
-$sujet = "Formualaire de contact Geo2R.com";
+$sujet = "Formulaire de contact Geo2R.com";
 //=========
 
 //=====Création du header de l'e-mail.
 $header = "From: \"Contact-Geo2R\"<contact@geo2r.com>".$passage_ligne;
-$header.= "Reply-to: \"Contact-Geo2R\" <contact@geo2r.com>".$passage_ligne;
+$header.= "Reply-to: \"$nom $prenom\" <$email>".$passage_ligne;
 $header.= "MIME-Version: 1.0".$passage_ligne;
 $header.= "Content-Type: multipart/mixed;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 //==========
