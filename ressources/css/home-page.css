@@ -22,6 +22,20 @@ h3 {
   color: var(--main-light-orange);
 }
 
+.bg-black {
+  margin-top: 7em;
+  background-color: #3b4041;
+  margin-bottom: 1em;
+}
+
+.bg-black img {
+  width: 54%;
+  position: relative;
+  z-index: 1000;
+  margin-top: -5em;
+  margin-left: 20%;
+}
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -98,6 +112,7 @@ h3 {
 .dot-container {
   text-align: center;
   margin-top: 0.7em;
+  margin-bottom: 1em;
 }
 
 .dot-container .dot {
@@ -146,7 +161,7 @@ h3 {
 
 @media only screen and (min-width: 501px) and (max-width: 768px) {
   .slideshow-container img {
-    height: 15em;
+    height: 13em;
   }
 
   .slideshow-container .text {

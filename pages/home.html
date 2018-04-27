@@ -18,6 +18,7 @@
     <link href="../ressources/css/main.css" rel="stylesheet">
     <link href="../ressources/css/home-page.css" rel="stylesheet">
     <link href="../ressources/css/services-page.css" rel="stylesheet">
+    <link href="../ressources/css/presentation-page.css" rel="stylesheet">
   </head>
 
   <body>
@@ -78,14 +79,12 @@
         <div class="container-title"><h1>ACCUEIL</h1></div>
 
     <main role="main" class="container">
-      <div class="atouts">
-        <h2>NOS ATOUTS</h2>
         <div class="row">
           <div class="d-none d-lg-block col-lg-2"></div>
           <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
             <img src="../../ressources/images/icon-search.png" class="icone" alt="Icone Search">
             <span class="vertical-align">
-              <h4>PRECISION & PRECISION</h4>
+              <h4>PRECISION</h4>
             </span>
             <span>
               <p>De l'ordre du cm</p>
@@ -116,16 +115,21 @@
           </div>
           <div class="d-none d-lg-block col-lg-2"></div>
         </div>
+      </main> <!-- /container -->
 
-        <div class="centered">
-          <img src="../ressources/images/diagramme-plaquette-rognee.jpg" alt="Diagramme présentation" style="width: 40%; margin-top:2em;">
-        </div>
-        <div class="crossbar-bot"></div>
+      <div class="bg-black">
+        <img src="../ressources/images/diagrammeV3.png" alt="Diagramme présentation">
       </div>
 
       <!-- Slideshow container -->
       <div class="slideshow-container">
-        <h2>REALISATIONS</h2>
+        <div class="row">
+          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left"></div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
+            <h2>REALISATIONS</h2>
+          </div>
+          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
+        </div>
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides">
@@ -157,13 +161,6 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-
-      <div class="crossbar-bot"></div>
-
-      <div class="centered">
-        <img src="../ressources/images/diagramme-plaquette.jpg" alt="Diagramme présentation" style="width: 45%">
-      </div>
-    </main> <!-- /container -->
   </div>
 
 
@@ -192,7 +189,16 @@
         <p class="right">PLAN DU SITE</p>
         <ul class="right">
           <li><a href="#">Accueil</a></li>
-          <li><a href="#">Services</a></li>
+          <li class="dropleft">
+            <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown3">
+              <a class="dropdown-item" href="services/cartographie">Cartographie</a>
+              <a class="dropdown-item" href="services/inspection">Inspection</a>
+              <a class="dropdown-item" href="services/modelisation3d">Modélisation 3D</a>
+              <a class="dropdown-item" href="services/integration3d">Intégration 3D</a>
+              <a class="dropdown-item" href="services/audiovisuel">Audiovisuel</a>
+            </div>
+          </li>
           <li><a href="presentation">Présentation</a></li>
           <li><a href="#">Actualités</a></li>
           <li><a href="contact">Contact</a></li>

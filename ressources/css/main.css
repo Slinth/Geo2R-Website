@@ -105,6 +105,22 @@ video {
   margin-right: 17%;
 }
 
+.dropdown-footer {
+  display: none;
+}
+
+.footer .dropdown-menu {
+  background-color: var(--main-dark) !important;
+  border: solid 1px var(--main-light-orange);
+  margin-top: -1em;
+ }
+
+.footer .dropdown-menu .dropdown-item {
+ background-color: var(--main-dark) !important;
+ line-height: 1.5em;
+ font-size: 0.8em;
+}
+
 .legals {
   font-size: 0.8rem;
   color: var(--main-light-grey);
