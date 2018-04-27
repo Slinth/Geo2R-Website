@@ -50,7 +50,6 @@
                 <div class="dropdown-menu" aria-labelledby="dropdown2">
                   <a class="dropdown-item" href="presentation#societe">Société</a>
                   <a class="dropdown-item" href="presentation#equipe">Equipe</a>
-                  <a class="dropdown-item" href="presentation#drones">Drones</a>
                   <a class="dropdown-item" href="presentation#reglementation">Réglementaion</a>
                 </div>
               </li>
@@ -99,26 +98,26 @@
               <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
             </div>
 
-            <form>
+            <form action="../ressources/php/send-email.php" method="post">
               <div class="form-row">
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Prénom" id="input-prenom" required>
+                <input type="text" class="form-control" placeholder="Prénom" name="prenom" id="input-prenom" required>
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Nom" id="input-nom" required>
+                  <input type="text" class="form-control" placeholder="Nom" name="nom" id="input-nom" required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col">
-                <input type="tel" class="form-control" placeholder="Téléphone" id="input-tel" required>
+                <input type="tel" class="form-control" placeholder="Téléphone" name="tel" id="input-tel" required>
                 </div>
                 <div class="col">
-                  <input type="email" class="form-control" placeholder="Email" id="input-email" required>
+                  <input type="email" class="form-control" placeholder="Email" name="email" id="input-email" required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col">
-                  <textarea class="form-control" rows="3" placeholder="Message" id="input-message" required></textarea>
+                  <textarea class="form-control" rows="3" placeholder="Message" name="message" id="input-message" required></textarea>
                 </div>
               </div>
               <p><button type="submit" class="btn btn-orange">Envoyer</button></p>
@@ -159,7 +158,7 @@
           <li><a href="contact">Contact</a></li>
         </ul>
       </div>
-      <div class="col-12 legals">@2018 Geo2R Tous droits réservés | Mention légales | CGV</div>
+      <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="mentions-legales">Mention légales</a></div>
     </div>
   </footer>
 </html>
