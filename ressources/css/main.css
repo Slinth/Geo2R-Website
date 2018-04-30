@@ -163,6 +163,11 @@ video {
   color: var(--main-orange) !important;
 }
 
+.navbar-nav .nav-item.active .nav-link:hover {
+  background-color: white !important;
+
+}
+
 .navbar-title {
     display: none;
 }
@@ -201,6 +206,13 @@ video {
 }
 
 .navbar-brand img {
+  width: auto;
+  height: 5rem;
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+}
+
+.navbar-brand img.small {
   width: auto;
   height: 3.5rem;
 }
