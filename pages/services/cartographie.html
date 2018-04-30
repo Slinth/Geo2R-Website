@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" xmlns:og="http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +8,18 @@
     <meta name="title" content="Geo2R - Votre spécialiste de l'imagerie aérienne par Drone" />
     <meta name="description" content="Geo2R est spécialiste de l'imagerie et des prises de vue par drone. Nous intervenons sur différents domaines :énergie, BTP , agriculture..." />
     <meta name="author" content="">
+    <meta property="og:title" content="Service Cartographie" />
+    <meta property="og:type" content="Page service : cartographie" />
+    <meta property="og:url" content="http://www.geo2r.com/services/cartographie" />
+    <meta property="og:image" content="http://www.geo2r.com/ressources/images/logo-geo2r-blanc.png" />
     <link rel="icon" href="../../ressources/images/logo.png">
 
     <title>Geo2R - Votre spécialiste de l'imagerie aérienne par Drone</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- AOS animations CSS -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="../../ressources/css/main.css" rel="stylesheet">
     <link href="../../ressources/css/services-page.css" rel="stylesheet">
@@ -23,7 +29,7 @@
       <!-- Dark navbar -->
       <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
         <a class="navbar-brand" href="../home">
-          <img src="../../ressources/images/logo-geo2r-blanc.png" width="auto" height="50" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
+          <img id="navbarBrand" src="../../ressources/images/logo-geo2r-blanc.png" width="auto" height="50" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
         </a>
         <p class="navbar-title">Geo2R - Votre spécialiste de l'imagerie aérienne par Drone</p>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -146,12 +152,15 @@
     </main> <!-- /container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- AOS animations JavaScript -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="../../ressources/js/animations.js"></script>
+    <!-- Custom JavaScript -->
+
   </body>
 
   <footer class="footer">
@@ -170,10 +179,19 @@
         <p class="right">PLAN DU SITE</p>
         <ul class="right">
           <li><a href="../home">Accueil</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="presentation">Présentation</a></li>
+          <li class="dropleft">
+            <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown3">
+              <a class="dropdown-item" href="cartographie">Cartographie</a>
+              <a class="dropdown-item" href="inspection">Inspection</a>
+              <a class="dropdown-item" href="modelisation3d">Modélisation 3D</a>
+              <a class="dropdown-item" href="integration3d">Intégration 3D</a>
+              <a class="dropdown-item" href="audiovisuel">Audiovisuel</a>
+            </div>
+          </li>
+          <li><a href="../presentation">Présentation</a></li>
           <li><a href="#">Actualités</a></li>
-          <li><a href="contact">Contact</a></li>
+          <li><a href="../contact">Contact</a></li>
         </ul>
       </div>
       <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="../mentions-legales">Mention légales</a></div>
