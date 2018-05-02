@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns:og="http://ogp.me/ns#">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,10 +80,10 @@
 
         <div class="container-title"><h1>CONTACT</h1></div>
 
-        <main role="main" class="container">
+        <main class="container">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centered">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2547.2915290986857!2d3.3790159157028543!3d50.32381207945813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2eaeb9afcd4f7%3A0xe24a71fcb87e414!2s350+Rue+Arthur+Brunet%2C+59220+Denain!5e0!3m2!1sfr!2sfr!4v1524469752886" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2547.2915290986857!2d3.3790159157028543!3d50.32381207945813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2eaeb9afcd4f7%3A0xe24a71fcb87e414!2s350+Rue+Arthur+Brunet%2C+59220+Denain!5e0!3m2!1sfr!2sfr!4v1524469752886" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 middle-bar">
               <h2>COORDONNEES</h2>
@@ -92,6 +92,7 @@
                 <li><img src="../ressources/images/icon-account.png" class="icone" alt="Account Icon">Willy FAUCHER - 06 76 83 23 18</li>
                 <li><img src="../ressources/images/icon-home.png" class="icone" alt="Home Icon">350 rue Arthur Brunet - 59520 Denain</li>
                 <li><img src="../ressources/images/icon-email.png" class="icone" alt="Email Icon">contact@geo2r.com</li>
+              </ul>
             </div>
           </div>
 
@@ -104,33 +105,74 @@
               <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
             </div>
 
-            <form action="../ressources/php/send-email.php" method="post">
+            <form class="needs-validation" novalidate id="FormContact" action="../ressources/php/send-email.php" method="post">
               <div class="form-row">
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Prénom" name="prenom" id="input-prenom" required>
+                  <input type="text" class="form-control" placeholder="Prénom" id="input-prenom" required>
+                  <div class="invalid-feedback">Veuillez renseigner ce champ.</div>
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Nom" name="nom" id="input-nom" required>
+                  <input type="text" class="form-control" placeholder="Nom" id="input-nom" required>
+                  <div class="invalid-feedback">Veuillez renseigner ce champ.</div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col">
-                <input type="tel" class="form-control" placeholder="Téléphone" name="tel" id="input-tel" required>
+                  <input type="tel" class="form-control" placeholder="Téléphone" id="input-tel" required>
+                  <div class="invalid-feedback">Veuillez renseigner un numéro de téléphone valide.</div>
                 </div>
                 <div class="col">
-                  <input type="email" class="form-control" placeholder="Email" name="email" id="input-email" required>
+                  <input type="email" class="form-control" placeholder="Email" id="input-email" required>
+                  <div class="invalid-feedback">Veuillez saisir une adresse mail valide.</div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col">
-                  <textarea class="form-control" rows="3" placeholder="Message" name="message" id="input-message" required></textarea>
+                  <textarea class="form-control" rows="3" placeholder="Message" id="input-message" required></textarea>
+                  <div class="invalid-feedback">Veuillez saisir un message.</div>
                 </div>
               </div>
-              <p><button type="submit" class="btn btn-orange">Envoyer</button></p>
+              <p><button type="submit" class="btn btn-orange" onclick="submitV2()">Envoyer</button></p>
             </form>
           </div>
-        </div> <!-- /container -->
-      </main>
+        </main> <!-- /container -->
+      </div> <!-- /wrapper -->
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
+              <p class="left">COORDONNEES</p>
+              <ul class="left">
+                <li>350 rue Arthur Brunet - 59520 Denain</li>
+                <li>06 61 10 67 04</li>
+                <li>06 76 83 23 18</li>
+                <li>contact@geo2r.com</li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
+              <p class="right">PLAN DU SITE</p>
+              <ul class="right">
+                <li><a href="home">Accueil</a></li>
+                <li class="dropleft">
+                  <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown3">
+                    <a class="dropdown-item" href="services/cartographie">Cartographie</a>
+                    <a class="dropdown-item" href="services/inspection">Inspection</a>
+                    <a class="dropdown-item" href="services/modelisation3d">Modélisation 3D</a>
+                    <a class="dropdown-item" href="services/integration3d">Intégration 3D</a>
+                    <a class="dropdown-item" href="services/audiovisuel">Audiovisuel</a>
+                  </div>
+                </li>
+                <li><a href="presentation">Présentation</a></li>
+                <li><a href="#">Actualités</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="mentions-legales">Mention légales</a></div>
+          </div>
+        </footer>
 
 
       <!-- Bootstrap core JavaScript -->
@@ -141,41 +183,6 @@
       <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
       <script src="../ressources/js/animations.js"></script>
       <!-- Custom JavaScript -->
-      <script src="../ressources/js/validation-form-contact.js" type="text/javascript"></script>
+      <script src="../ressources/js/validation-form-contact.js"></script>
     </body>
-
-    <footer class="footer">
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
-          <p class="left">COORDONNEES</p>
-          <ul class="left">
-            <li>350 rue Arthur Brunet - 59520 Denain</li>
-            <li>06 61 10 67 04</li>
-            <li>06 76 83 23 18</li>
-            <li>contact@geo2r.com</li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
-          <p class="right">PLAN DU SITE</p>
-          <ul class="right">
-            <li><a href="home">Accueil</a></li>
-            <li class="dropleft">
-              <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown3">
-                <a class="dropdown-item" href="services/cartographie">Cartographie</a>
-                <a class="dropdown-item" href="services/inspection">Inspection</a>
-                <a class="dropdown-item" href="services/modelisation3d">Modélisation 3D</a>
-                <a class="dropdown-item" href="services/integration3d">Intégration 3D</a>
-                <a class="dropdown-item" href="services/audiovisuel">Audiovisuel</a>
-              </div>
-            </li>
-            <li><a href="presentation">Présentation</a></li>
-            <li><a href="#">Actualités</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="mentions-legales">Mention légales</a></div>
-      </div>
-    </footer>
   </html>
