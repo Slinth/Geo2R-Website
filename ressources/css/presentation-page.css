@@ -38,6 +38,8 @@ ul {
 
 .centered ul li.orange {
   color: var(--main-orange);
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 img.portrait {
