@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns:og="http://ogp.me/ns#">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,10 +26,11 @@
   </head>
 
   <body>
+    <div class="wrapper">
       <!-- Dark navbar -->
       <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
         <a class="navbar-brand" href="../home">
-          <img id="navbarBrand" src="../../ressources/images/logo-geo2r-blanc.png" width="auto" height="50" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
+          <img id="navbarBrand" src="../../ressources/images/logo-geo2r-blanc.png" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
         </a>
         <p class="navbar-title">Geo2R - Votre spécialiste de l'imagerie aérienne par Drone</p>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,92 +69,128 @@
           </ul>
         </div>
         <a class="navbar-media" href="https://www.facebook.com/pages/GEO2R/809948345759365?fref=ts">
-          <img src="../ressources/images/logo-facebook.png" width="30" height="30" class="d-inline-block align-top social-network" alt="logo-facebook">
+          <img src="../ressources/images/logo-facebook.png" class="d-inline-block align-top social-network" alt="logo-facebook">
         </a>
         <a class="navbar-media" href="https://www.linkedin.com/company/geo2r/">
-          <img src="../ressources/images/logo-linkedin.png" width="30" height="30" class="d-inline-block align-top social-network" alt="logo-linkedin">
+          <img src="../ressources/images/logo-linkedin.png" class="d-inline-block align-top social-network" alt="logo-linkedin">
         </a>
         <a class="navbar-media" href="https://www.youtube.com/channel/UCEe42DZ5StJjWyXCiRmf0LQ">
-          <img src="../ressources/images/logo-youtube.png" width="30" height="30" class="d-inline-block align-top social-network" alt="logo-linkedin">
+          <img src="../ressources/images/logo-youtube.png" class="d-inline-block align-top social-network" alt="logo-linkedin">
         </a>
       </nav>
 
       <div class="container-title"><h1>AUDIOVISUEL</h1></div>
 
-    <main role="main" class="container">
-      <div class="row">
-        <div class="d-none d-lg-block col-lg-2"></div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
-          <img src="../../ressources/images/icon-home-square.png" class="icone" alt="Icone Home">
-          <span class="vertical-align">
-            <h4>MODELE 3D</h4>
-          </span>
-          <span>
+      <main class="container">
+        <div class="row">
+          <div class="d-none d-lg-block col-lg-2"></div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
+            <img src="../../ressources/images/icon-home-square.png" class="icone" alt="Icone Home">
+            <div class="vertical-align">
+              <h4>MODELE 3D</h4>
+            </div>
+            <div>
+              <p>Bâtiments, routes, voies d'accès, parking...</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
+            <img src="../../ressources/images/icon-light.png" class="icone" alt="Icone Light">
+            <div class="vertical-align">
+              <h4>RETOUCHE LUMINOSITE</h4>
+            </div>
+            <div>
+              <p>Exploitation fichier HDRI & projection des ombres au sol</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
+            <img src="../../ressources/images/icon-tree.png" class="icone" alt="Icone Tree">
+            <div class="vertical-align">
+              <h4>VEGETATION</h4>
+            </div>
+            <p>Arbres, haies, pelouses...</p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
+            <img src="../../ressources/images/icon-car.png" class="icone" alt="Icone Car">
+            <div class="vertical-align">
+              <h4>VEHICULES & PERSONNAGES</h4>
+            </div>
             <p>Bâtiments, routes, voies d'accès, parking...</p>
-          </span>
+          </div>
+          <div class="d-none d-lg-block col-lg-2"></div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
-          <img src="../../ressources/images/icon-light.png" class="icone" alt="Icone Light">
-          <span class="vertical-align">
-            <h4>RETOUCHE LUMINOSITE</h4>
-          </span>
-          <span>
-            <p>Exploitation fichier HDRI & projection des ombres au sol</p>
-          </span>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
-          <img src="../../ressources/images/icon-tree.png" class="icone" alt="Icone Tree">
-          <span class="vertical-align">
-            <h4>VEGETATION</h4>
-          </span>
-          <p>Arbres, haies, pelouses...</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
-          <img src="../../ressources/images/icon-car.png" class="icone" alt="Icone Car">
-          <span class="vertical-align">
-            <h4>VEHICULES & PERSONNAGES</h4>
-          </span>
-          <p>Bâtiments, routes, voies d'accès, parking...</p>
-        </div>
-        <div class="d-none d-lg-block col-lg-2"></div>
-      </div>
 
-      <div class="crossbar-bot"></div>
+        <div class="crossbar-bot"></div>
 
+        <div class="row">
+          <div class="d-none d-md-block col-md-2 col-lg-3"></div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-9 content justified">
+            <iframe src="https://www.youtube.com/embed/JexglrYYppI" style="border:0" allowfullscreen></iframe>
+            <h2>TITRE</h2>
+            <h3>Sous-titre</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus orci vel nulla dignissim mattis. Etiam laoreet diam ac massa sagittis ornare. Cras erat est, tempus ut nibh lacinia, dignissim iaculis sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut lobortis posuere risus, eu faucibus lacus lacinia vitae. Curabitur aliquet augue nec ultrices vestibulum. Nunc auctor fringilla auctor. Phasellus tempor metus ut aliquam ultricies.</p>
+        <img src="../../ressources/images/logo-twitter-official" width="100" height="100" class="left" alt="Logo Twiiter">
+        <p>Nunc sit amet consectetur lorem, quis placerat lectus. Maecenas sed viverra ex, sed iaculis neque. Aenean lobortis massa eget felis gravida commodo. Praesent bibendum faucibus quam, quis placerat turpis varius eget. Nam et ornare dolor. Integer fermentum nunc nunc, sit amet dapibus nisl commodo vel. Fusce quis viverra tellus.</p>
+
+        <h2>TITRE</h2>
+        <h3>Sous-titre</h3>
+        <p>Nulla mattis feugiat ultrices. Maecenas aliquet dolor ante, at sagittis ante porta sed. In tempor sagittis libero ac auctor. Proin finibus orci leo. Praesent pellentesque iaculis mauris eget mollis. Ut dictum eu nisi quis convallis. Quisque egestas, augue ut porta scelerisque, mauris felis blandit urna, malesuada porttitor dui dolor eget nisl. Aenean eget ex eu magna tincidunt volutpat. Pellentesque ut tempor tellus. Cras vel justo ut eros semper ullamcorper quis in erat. Ut vestibulum consectetur iaculis. Phasellus mauris lacus, venenatis a est at, rhoncus imperdiet orci. Suspendisse sapien nisl, vehicula vitae facilisis eget, lobortis at lorem. Nunc dictum consectetur mi, quis viverra ligula convallis ac. Donec ut nibh et ex egestas aliquam.</p>
+
+        <img src="../../ressources/images/logo-twitter-official" width="100" height="100" class="right" alt="Logo Twiiter">
+        <p>Nulla ultricies quis lectus at aliquet. Nam luctus arcu eu diam venenatis, non pretium urna iaculis. Aliquam vel eleifend nisl. Integer et iaculis erat. Mauris ut libero non nunc consequat condimentum vel iaculis lectus. Proin non lorem egestas, sagittis enim in, blandit ligula. Etiam rhoncus justo magna, ac molestie mauris tristique eu. Sed fringilla turpis sed lobortis pulvinar. Curabitur purus sapien, eleifend in rutrum a, consectetur consequat purus. Praesent dignissim quam pretium odio egestas vestibulum. Ut vel ante tristique ante blandit faucibus. Morbi molestie, metus in faucibus rutrum, quam est fermentum massa, ut vulputate neque ante ac sapien. Nullam ut leo lectus.</p>
+
+        <p>Nam nec purus tempus, blandit risus finibus, dignissim sem. Nulla ultrices diam sed risus placerat, eget sollicitudin risus eleifend. Nunc pharetra, lorem non sodales vestibulum, ante sapien congue neque, ac volutpat leo enim vel urna. Aenean volutpat urna eu suscipit commodo. Fusce ullamcorper dapibus facilisis. Etiam suscipit massa suscipit sem aliquet pellentesque. Aliquam sit amet felis at risus molestie tristique et sit amet lorem. Nam suscipit vehicula tellus, a tempus velit condimentum eget. Fusce est tellus, faucibus vitae semper et, imperdiet sit amet ante. Duis in ipsum purus. Morbi rhoncus risus ante, ac aliquet tellus lobortis nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam mattis, metus eu malesuada pulvinar, metus lectus lacinia dolor, euismod feugiat lacus nisi sed est.</p>
+
+          </div>
+        </div>
+
+        <div class="d-none d-md-block fixedContainer">
+          <h2>SERVICES</h2>
+          <ul>
+            <li><a href="cartographie">Cartographie</a></li>
+            <li><a href="inspection">Inspection</a></li>
+            <li><a href="modelisation3d">Modélisation 3D</a></li>
+            <li><a href="integration3d">Intégration 3D</a></li>
+            <li><a href="audiovisuel" class="active">Audiovisuel</a></li>
+          </ul>
+        </div>
+      </main> <!-- /container -->
+    </div> <!-- /wrapper -->
+
+    <!-- Footer -->
+    <footer class="footer">
       <div class="row">
-        <div class="d-none d-md-block col-md-2 col-lg-3"></div>
-        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-9 content justified">
-          <iframe src="https://www.youtube.com/embed/JexglrYYppI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          <h2>TITRE</h2>
-          <h3>Sous-titre</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus orci vel nulla dignissim mattis. Etiam laoreet diam ac massa sagittis ornare. Cras erat est, tempus ut nibh lacinia, dignissim iaculis sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut lobortis posuere risus, eu faucibus lacus lacinia vitae. Curabitur aliquet augue nec ultrices vestibulum. Nunc auctor fringilla auctor. Phasellus tempor metus ut aliquam ultricies.</p>
-      <img src="../../ressources/images/logo-twitter-official" width="100" height="100" class="left">
-      <p>Nunc sit amet consectetur lorem, quis placerat lectus. Maecenas sed viverra ex, sed iaculis neque. Aenean lobortis massa eget felis gravida commodo. Praesent bibendum faucibus quam, quis placerat turpis varius eget. Nam et ornare dolor. Integer fermentum nunc nunc, sit amet dapibus nisl commodo vel. Fusce quis viverra tellus.</p>
-
-      <h2>TITRE</h2>
-      <h3>Sous-titre</h3>
-      <p>Nulla mattis feugiat ultrices. Maecenas aliquet dolor ante, at sagittis ante porta sed. In tempor sagittis libero ac auctor. Proin finibus orci leo. Praesent pellentesque iaculis mauris eget mollis. Ut dictum eu nisi quis convallis. Quisque egestas, augue ut porta scelerisque, mauris felis blandit urna, malesuada porttitor dui dolor eget nisl. Aenean eget ex eu magna tincidunt volutpat. Pellentesque ut tempor tellus. Cras vel justo ut eros semper ullamcorper quis in erat. Ut vestibulum consectetur iaculis. Phasellus mauris lacus, venenatis a est at, rhoncus imperdiet orci. Suspendisse sapien nisl, vehicula vitae facilisis eget, lobortis at lorem. Nunc dictum consectetur mi, quis viverra ligula convallis ac. Donec ut nibh et ex egestas aliquam.</p>
-
-      <img src="../../ressources/images/logo-twitter-official" width="100" height="100" class="right">
-      <p>Nulla ultricies quis lectus at aliquet. Nam luctus arcu eu diam venenatis, non pretium urna iaculis. Aliquam vel eleifend nisl. Integer et iaculis erat. Mauris ut libero non nunc consequat condimentum vel iaculis lectus. Proin non lorem egestas, sagittis enim in, blandit ligula. Etiam rhoncus justo magna, ac molestie mauris tristique eu. Sed fringilla turpis sed lobortis pulvinar. Curabitur purus sapien, eleifend in rutrum a, consectetur consequat purus. Praesent dignissim quam pretium odio egestas vestibulum. Ut vel ante tristique ante blandit faucibus. Morbi molestie, metus in faucibus rutrum, quam est fermentum massa, ut vulputate neque ante ac sapien. Nullam ut leo lectus.</p>
-
-      <p>Nam nec purus tempus, blandit risus finibus, dignissim sem. Nulla ultrices diam sed risus placerat, eget sollicitudin risus eleifend. Nunc pharetra, lorem non sodales vestibulum, ante sapien congue neque, ac volutpat leo enim vel urna. Aenean volutpat urna eu suscipit commodo. Fusce ullamcorper dapibus facilisis. Etiam suscipit massa suscipit sem aliquet pellentesque. Aliquam sit amet felis at risus molestie tristique et sit amet lorem. Nam suscipit vehicula tellus, a tempus velit condimentum eget. Fusce est tellus, faucibus vitae semper et, imperdiet sit amet ante. Duis in ipsum purus. Morbi rhoncus risus ante, ac aliquet tellus lobortis nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam mattis, metus eu malesuada pulvinar, metus lectus lacinia dolor, euismod feugiat lacus nisi sed est.</p>
-
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
+          <p class="left">COORDONNEES</p>
+          <ul class="left">
+            <li>350 rue Arthur Brunet - 59520 Denain</li>
+            <li>06 61 10 67 04</li>
+            <li>06 76 83 23 18</li>
+            <li>contact@geo2r.com</li>
+          </ul>
         </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
+          <p class="right">PLAN DU SITE</p>
+          <ul class="right">
+            <li><a href="../home">Accueil</a></li>
+            <li class="dropleft">
+              <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown3">
+                <a class="dropdown-item" href="cartographie">Cartographie</a>
+                <a class="dropdown-item" href="inspection">Inspection</a>
+                <a class="dropdown-item" href="modelisation3d">Modélisation 3D</a>
+                <a class="dropdown-item" href="integration3d">Intégration 3D</a>
+                <a class="dropdown-item" href="#">Audiovisuel</a>
+              </div>
+            </li>
+            <li><a href="../presentation">Présentation</a></li>
+            <li><a href="#">Actualités</a></li>
+            <li><a href="../contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="../mentions-legales">Mention légales</a></div>
       </div>
-
-      <div class="d-none d-md-block fixedContainer">
-        <h2>SERVICES</h2>
-        <ul>
-          <li><a href="cartographie">Cartographie</a></li>
-          <li><a href="inspection">Inspection</a></li>
-          <li><a href="modelisation3d">Modélisation 3D</a></li>
-          <li><a href="integration3d">Intégration 3D</a></li>
-          <li><a href="audiovisuel" class="active">Audiovisuel</a></li>
-        </ul>
-      </div>
-    </main> <!-- /container -->
-
+    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -165,39 +202,4 @@
     <!-- Custom JavaScript -->
 
   </body>
-
-  <footer class="footer">
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
-        <p class="left">COORDONNEES</p>
-        <ul class="left">
-          <li>350 rue Arthur Brunet - 59520 Denain</li>
-          <li>06 61 10 67 04</li>
-          <li>06 76 83 23 18</li>
-          <li>contact@geo2r.com</li>
-        </ul>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
-        <p class="right">PLAN DU SITE</p>
-        <ul class="right">
-          <li><a href="../home">Accueil</a></li>
-          <li class="dropleft">
-            <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown3">
-              <a class="dropdown-item" href="cartographie">Cartographie</a>
-              <a class="dropdown-item" href="inspection">Inspection</a>
-              <a class="dropdown-item" href="modelisation3d">Modélisation 3D</a>
-              <a class="dropdown-item" href="integration3d">Intégration 3D</a>
-              <a class="dropdown-item" href="audiovisuel">Audiovisuel</a>
-            </div>
-          </li>
-          <li><a href="../presentation">Présentation</a></li>
-          <li><a href="#">Actualités</a></li>
-          <li><a href="../contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="../mentions-legales">Mention légales</a></div>
-    </div>
-  </footer>
 </html>

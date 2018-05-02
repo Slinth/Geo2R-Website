@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns:og="http://ogp.me/ns#">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +30,7 @@
       <!-- Dark navbar -->
       <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
         <a class="navbar-brand" href="home">
-          <img id="navbarBrand" src="../../ressources/images/logo-geo2r-blanc.png" width="auto" height="50" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
+          <img id="navbarBrand" src="../../ressources/images/logo-geo2r-blanc.png" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -80,7 +80,7 @@
 
       <div class="container-title"><h1>PRESENTATION</h1></div>
 
-      <main role="main" class="container">
+      <main class="container">
         <div id="toBeHidden"></div>
         <div id="societe" class="section">
           <div class="row">
@@ -90,7 +90,7 @@
             </div>
             <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
           </div>
-          <span class="content">
+          <div class="content">
             <h3>Notre Objectif : Répondre au plus juste à vos attentes</h3>
             <p>Implantée dans le nord de la France, Geo2R est une entreprise d'imagerie aérienne technique par drone et de post-traitement des données.</p>
             <p>La société est spécialisée dans les domaines techniques suivants :</p>
@@ -101,7 +101,7 @@
               <li>INTÉGRATION 3D (architectes, promoteurs, bâtiment,....)</li>
             </ul>
             <p>GEO2R accompagne les entreprises et les collectivités dans chacun de leurs projets et intervient sur le territoire français et européen.</p>
-          </span>
+          </div>
         </div>
 
         <div id="equipe" class="section">
@@ -163,7 +163,7 @@
             </div>
             <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
           </div>
-          <span class="content">
+          <div class="content">
             <p>Vous devez savoir que la réalisation de prises de vues aériennes avec des aéronefs télépilotés est extrêmement encadrée par la DGAC (Direction Générale de l’Aviation Civil).</p>
             <p>Cette réglementation est encadrée par un certain nombre de conditions légales comme : <b>« l’arrêté du 11 avril 2012 relatif à l’utilisation de l’espace aérien par les aéronefs qui circulent sans personne à bord »</b> consultable directement <a href="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000025834953">ICI</a></p>
 
@@ -186,10 +186,45 @@
               <li>Prévenir les mairies locales</li>
               <li>...</li>
             </ul>
-          </span>
+          </div>
         </div>
-
       </main><!-- /container -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
+            <p class="left">COORDONNEES</p>
+            <ul class="left">
+              <li>350 rue Arthur Brunet - 59520 Denain</li>
+              <li>06 61 10 67 04</li>
+              <li>06 76 83 23 18</li>
+              <li>contact@geo2r.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
+            <p class="right">PLAN DU SITE</p>
+            <ul class="right">
+              <li><a href="home">Accueil</a></li>
+              <li class="dropleft">
+                <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown3">
+                  <a class="dropdown-item" href="services/cartographie">Cartographie</a>
+                  <a class="dropdown-item" href="services/inspection">Inspection</a>
+                  <a class="dropdown-item" href="services/modelisation3d">Modélisation 3D</a>
+                  <a class="dropdown-item" href="services/integration3d">Intégration 3D</a>
+                  <a class="dropdown-item" href="services/audiovisuel">Audiovisuel</a>
+                </div>
+              </li>
+              <li><a href="#">Présentation</a></li>
+              <li><a href="#">Actualités</a></li>
+              <li><a href="contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="mentions-legales">Mention légales</a></div>
+        </div>
+      </footer>
 
 
       <!-- Bootstrap core JavaScript -->
@@ -202,39 +237,4 @@
       <!-- Custom JavaScript -->
 
     </body>
-
-    <footer class="footer">
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
-          <p class="left">COORDONNEES</p>
-          <ul class="left">
-            <li>350 rue Arthur Brunet - 59520 Denain</li>
-            <li>06 61 10 67 04</li>
-            <li>06 76 83 23 18</li>
-            <li>contact@geo2r.com</li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
-          <p class="right">PLAN DU SITE</p>
-          <ul class="right">
-            <li><a href="home">Accueil</a></li>
-            <li class="dropleft">
-              <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown3">
-                <a class="dropdown-item" href="services/cartographie">Cartographie</a>
-                <a class="dropdown-item" href="services/inspection">Inspection</a>
-                <a class="dropdown-item" href="services/modelisation3d">Modélisation 3D</a>
-                <a class="dropdown-item" href="services/integration3d">Intégration 3D</a>
-                <a class="dropdown-item" href="services/audiovisuel">Audiovisuel</a>
-              </div>
-            </li>
-            <li><a href="#">Présentation</a></li>
-            <li><a href="#">Actualités</a></li>
-            <li><a href="contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="mentions-legales">Mention légales</a></div>
-      </div>
-    </footer>
   </html>
