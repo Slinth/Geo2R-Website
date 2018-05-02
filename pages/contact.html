@@ -108,27 +108,27 @@
             <form class="needs-validation" novalidate id="FormContact" action="../ressources/php/send-email.php" method="post">
               <div class="form-row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Prénom" id="input-prenom" required>
+                  <input type="text" class="form-control" placeholder="Prénom" name="prenom" id="input-prenom" required>
                   <div class="invalid-feedback">Veuillez renseigner ce champ.</div>
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Nom" id="input-nom" required>
+                  <input type="text" class="form-control" placeholder="Nom" name="nom" id="input-nom" required>
                   <div class="invalid-feedback">Veuillez renseigner ce champ.</div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col">
-                  <input type="tel" class="form-control" placeholder="Téléphone" id="input-tel" required>
+                  <input type="tel" class="form-control" placeholder="Téléphone" name="tel" id="input-tel" required>
                   <div class="invalid-feedback">Veuillez renseigner un numéro de téléphone valide.</div>
                 </div>
                 <div class="col">
-                  <input type="email" class="form-control" placeholder="Email" id="input-email" required>
+                  <input type="email" class="form-control" placeholder="Email" name="mail" id="input-email" required>
                   <div class="invalid-feedback">Veuillez saisir une adresse mail valide.</div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col">
-                  <textarea class="form-control" rows="3" placeholder="Message" id="input-message" required></textarea>
+                  <textarea class="form-control" rows="3" placeholder="Message" name="message" id="input-message" required></textarea>
                   <div class="invalid-feedback">Veuillez saisir un message.</div>
                 </div>
               </div>
