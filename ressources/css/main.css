@@ -255,6 +255,18 @@ video {
   color: inherit;
 }
 
+.button-floating {
+  position: fixed;
+  left: 90em;
+  top: 43em;
+  z-index: 1050;
+}
+
+.button-floating img {
+  width: 3.5em;
+  height: 3.5em;
+}
+
 
 /** GESTION NAVIGATION ANCRES PRESENTATION */
 #societe:target:before {
