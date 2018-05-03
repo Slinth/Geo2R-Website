@@ -27,8 +27,9 @@
 
   <body>
     <div class="wrapper">
-        <!-- Dark navbar -->
-        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+      <!-- Dark navbar -->
+      <header class="sticky-top bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="home">
             <img id="navbarBrand" src="../../ressources/images/logo-geo2r-blanc.png" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
           </a>
@@ -77,112 +78,114 @@
             <img src="../ressources/images/logo-youtube.png" class="d-inline-block align-top social-network" alt="logo-linkedin">
           </a>
         </nav>
+        <progress value="0" max="3000" id="progress-bar"></progress>
+      </header>
 
-        <div class="container-title"><h1>CONTACT</h1></div>
+      <div class="container-title"><h1>CONTACT</h1></div>
 
-        <main class="container">
+      <main class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centered">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2547.2915290986857!2d3.3790159157028543!3d50.32381207945813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2eaeb9afcd4f7%3A0xe24a71fcb87e414!2s350+Rue+Arthur+Brunet%2C+59220+Denain!5e0!3m2!1sfr!2sfr!4v1524469752886" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 middle-bar">
+            <h2>COORDONNEES</h2>
+            <ul>
+              <li><img src="../ressources/images/icon-account.png" class="icone" alt="Account Icon">Julien GERARD - 06 61 10 67 04</li>
+              <li><img src="../ressources/images/icon-account.png" class="icone" alt="Account Icon">Willy FAUCHER - 06 76 83 23 18</li>
+              <li><img src="../ressources/images/icon-home.png" class="icone" alt="Home Icon">350 rue Arthur Brunet - 59520 Denain</li>
+              <li><img src="../ressources/images/icon-email.png" class="icone" alt="Email Icon">contact@geo2r.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="center-content">
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centered">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2547.2915290986857!2d3.3790159157028543!3d50.32381207945813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2eaeb9afcd4f7%3A0xe24a71fcb87e414!2s350+Rue+Arthur+Brunet%2C+59220+Denain!5e0!3m2!1sfr!2sfr!4v1524469752886" style="border:0" allowfullscreen></iframe>
+            <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left"></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <h2>CONTACTEZ NOUS</h2>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 middle-bar">
-              <h2>COORDONNEES</h2>
-              <ul>
-                <li><img src="../ressources/images/icon-account.png" class="icone" alt="Account Icon">Julien GERARD - 06 61 10 67 04</li>
-                <li><img src="../ressources/images/icon-account.png" class="icone" alt="Account Icon">Willy FAUCHER - 06 76 83 23 18</li>
-                <li><img src="../ressources/images/icon-home.png" class="icone" alt="Home Icon">350 rue Arthur Brunet - 59520 Denain</li>
-                <li><img src="../ressources/images/icon-email.png" class="icone" alt="Email Icon">contact@geo2r.com</li>
-              </ul>
-            </div>
+            <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
           </div>
 
-          <div class="center-content">
-            <div class="row">
-              <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left"></div>
-              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <h2>CONTACTEZ NOUS</h2>
+          <form class="needs-validation" novalidate id="FormContact" action="../ressources/php/send-email.php" method="post">
+            <div class="form-row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Prénom" name="prenom" id="input-prenom" required>
+                <div class="invalid-feedback">Veuillez renseigner ce champ.</div>
               </div>
-              <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Nom" name="nom" id="input-nom" required>
+                <div class="invalid-feedback">Veuillez renseigner ce champ.</div>
+              </div>
             </div>
-
-            <form class="needs-validation" novalidate id="FormContact" action="../ressources/php/send-email.php" method="post">
-              <div class="form-row">
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Prénom" name="prenom" id="input-prenom" required>
-                  <div class="invalid-feedback">Veuillez renseigner ce champ.</div>
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Nom" name="nom" id="input-nom" required>
-                  <div class="invalid-feedback">Veuillez renseigner ce champ.</div>
-                </div>
+            <div class="form-row">
+              <div class="col">
+                <input type="tel" class="form-control" placeholder="Téléphone" name="tel" id="input-tel" required>
+                <div class="invalid-feedback">Veuillez renseigner un numéro de téléphone valide.</div>
               </div>
-              <div class="form-row">
-                <div class="col">
-                  <input type="tel" class="form-control" placeholder="Téléphone" name="tel" id="input-tel" required>
-                  <div class="invalid-feedback">Veuillez renseigner un numéro de téléphone valide.</div>
-                </div>
-                <div class="col">
-                  <input type="email" class="form-control" placeholder="Email" name="mail" id="input-email" required>
-                  <div class="invalid-feedback">Veuillez saisir une adresse mail valide.</div>
-                </div>
+              <div class="col">
+                <input type="email" class="form-control" placeholder="Email" name="mail" id="input-email" required>
+                <div class="invalid-feedback">Veuillez saisir une adresse mail valide.</div>
               </div>
-              <div class="form-row">
-                <div class="col">
-                  <textarea class="form-control" rows="3" placeholder="Message" name="message" id="input-message" required></textarea>
-                  <div class="invalid-feedback">Veuillez saisir un message.</div>
-                </div>
-              </div>
-              <p><button type="submit" class="btn btn-orange" onclick="submitV2()">Envoyer</button></p>
-            </form>
-          </div>
-        </main> <!-- /container -->
-      </div> <!-- /wrapper -->
-
-        <!-- Footer -->
-        <footer class="footer">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
-              <p class="left">COORDONNEES</p>
-              <ul class="left">
-                <li>350 rue Arthur Brunet - 59520 Denain</li>
-                <li>06 61 10 67 04</li>
-                <li>06 76 83 23 18</li>
-                <li>contact@geo2r.com</li>
-              </ul>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
-              <p class="right">PLAN DU SITE</p>
-              <ul class="right">
-                <li><a href="home">Accueil</a></li>
-                <li class="dropleft">
-                  <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-                  <div class="dropdown-menu" aria-labelledby="dropdown3">
-                    <a class="dropdown-item" href="services/cartographie">Cartographie</a>
-                    <a class="dropdown-item" href="services/inspection">Inspection</a>
-                    <a class="dropdown-item" href="services/modelisation3d">Modélisation 3D</a>
-                    <a class="dropdown-item" href="services/integration3d">Intégration 3D</a>
-                    <a class="dropdown-item" href="services/audiovisuel">Audiovisuel</a>
-                  </div>
-                </li>
-                <li><a href="presentation">Présentation</a></li>
-                <li><a href="#">Actualités</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+            <div class="form-row">
+              <div class="col">
+                <textarea class="form-control" rows="3" placeholder="Message" name="message" id="input-message" required></textarea>
+                <div class="invalid-feedback">Veuillez saisir un message.</div>
+              </div>
             </div>
-            <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="mentions-legales">Mention légales</a></div>
-          </div>
-        </footer>
+            <p><button type="submit" class="btn btn-orange" onclick="submitV2()">Envoyer</button></p>
+          </form>
+        </div>
+      </main> <!-- /container -->
+    </div> <!-- /wrapper -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
+          <p class="left">COORDONNEES</p>
+          <ul class="left">
+            <li>350 rue Arthur Brunet - 59520 Denain</li>
+            <li>06 61 10 67 04</li>
+            <li>06 76 83 23 18</li>
+            <li>contact@geo2r.com</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
+          <p class="right">PLAN DU SITE</p>
+          <ul class="right">
+            <li><a href="home">Accueil</a></li>
+            <li class="dropleft">
+              <a class="dropdown-toggle" href="#" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown3">
+                <a class="dropdown-item" href="services/cartographie">Cartographie</a>
+                <a class="dropdown-item" href="services/inspection">Inspection</a>
+                <a class="dropdown-item" href="services/modelisation3d">Modélisation 3D</a>
+                <a class="dropdown-item" href="services/integration3d">Intégration 3D</a>
+                <a class="dropdown-item" href="services/audiovisuel">Audiovisuel</a>
+              </div>
+            </li>
+            <li><a href="presentation">Présentation</a></li>
+            <li><a href="#">Actualités</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="mentions-legales">Mention légales</a></div>
+      </div>
+    </footer>
 
 
-      <!-- Bootstrap core JavaScript -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-      <!-- AOS animations JavaScript -->
-      <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-      <script src="../ressources/js/animations.js"></script>
-      <!-- Custom JavaScript -->
-      <script src="../ressources/js/validation-form-contact.js"></script>
-    </body>
-  </html>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- AOS animations JavaScript -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="../ressources/js/animations.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../ressources/js/validation-form-contact.js"></script>
+  </body>
+</html>

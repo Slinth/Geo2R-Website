@@ -26,9 +26,9 @@
   </head>
 
   <body>
-
-      <!-- Dark navbar -->
-      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <!-- Dark navbar -->
+    <header class="sticky-top bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="home">
           <img id="navbarBrand" src="../../ressources/images/logo-geo2r-blanc.png" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
         </a>
@@ -54,9 +54,9 @@
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle rounded" href="#" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRESENTATION</a>
               <div class="dropdown-menu" aria-labelledby="dropdown2">
-                <a class="dropdown-item" href="#societe">Société</a>
-                <a class="dropdown-item" href="#equipe">Equipe</a>
-                <a class="dropdown-item" href="#reglementation">Réglementaion</a>
+                <a class="dropdown-item" href="presentation#societe">Société</a>
+                <a class="dropdown-item" href="presentation#equipe">Equipe</a>
+                <a class="dropdown-item" href="presentation#reglementation">Réglementaion</a>
               </div>
             </li>
             <li class="nav-item">
@@ -68,15 +68,17 @@
           </ul>
         </div>
         <a class="navbar-media" href="https://www.facebook.com/pages/GEO2R/809948345759365?fref=ts">
-          <img src="../ressources/images/logo-facebook.png" width="30" height="30" class="d-inline-block align-top social-network" alt="logo-facebook">
+          <img src="../ressources/images/logo-facebook.png" class="d-inline-block align-top social-network" alt="logo-facebook">
         </a>
         <a class="navbar-media" href="https://www.linkedin.com/company/geo2r/">
-          <img src="../ressources/images/logo-linkedin.png" width="30" height="30" class="d-inline-block align-top social-network" alt="logo-linkedin">
+          <img src="../ressources/images/logo-linkedin.png" class="d-inline-block align-top social-network" alt="logo-linkedin">
         </a>
         <a class="navbar-media" href="https://www.youtube.com/channel/UCEe42DZ5StJjWyXCiRmf0LQ">
-          <img src="../ressources/images/logo-youtube.png" width="30" height="30" class="d-inline-block align-top social-network" alt="logo-linkedin">
+          <img src="../ressources/images/logo-youtube.png" class="d-inline-block align-top social-network" alt="logo-linkedin">
         </a>
       </nav>
+      <progress value="0" max="3000" id="progress-bar"></progress>
+    </header>
 
       <div class="container-title"><h1>PRESENTATION</h1></div>
 
@@ -190,6 +192,10 @@
           </div>
         </div>
       </main><!-- /container -->
+
+      <div class="button-floating">
+        <a href="contact"><img src="../ressources/images/icon-email" alt="Bouton flottant Contact"></a>
+      </div>
 
       <!-- Footer -->
       <footer class="footer">
