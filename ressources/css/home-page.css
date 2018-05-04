@@ -15,10 +15,15 @@ h3 {
   color: var(--main-light-orange);
 }
 
+.container {
+  overflow: hidden !important;
+}
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
   margin: auto;
+  overflow: hidden !important;
 }
 
 .slideshow-container img {
@@ -47,9 +52,14 @@ h3 {
 }
 
 /* Position the "next button" to the right */
+.slideshow-container .prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the "next button" to the right */
 .slideshow-container .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0 3px 3px 0;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -67,7 +77,7 @@ h3 {
   bottom: 2em;
   width: 14%;
   text-align: center;
-  margin-left: 43%;
+  margin-left: 41.5%;
   background-color: var(--main-dark);
 }
 
@@ -131,28 +141,33 @@ h3 {
 }
 
 .bg-black {
-  margin-top: 7em;
   background-color: #3b4041;
   margin-bottom: 1em;
 }
 
 /* Morph */
 .morph {
-  overflow: hidden;
+  overflow: hidden !important;
   height: 34em;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.morph a {
+  text-decoration: none;
 }
 
 .morph #image {
   position: absolute;
   z-index: 900;
   width: 100%;
+  height: 30em;
 }
 
 .morph #image img {
-  width: 50%;
-  margin-left: 25%;
+  width: auto;
+  margin-left: 28%;
+  height: 100%;
 }
 
 .morph .round:hover {
@@ -174,6 +189,7 @@ h3 {
 .morph .round div.after {
   display: none;
   font-size: 1.2em;
+  text-decoration: none !important;
 }
 
 .morph .round:hover div.before {
@@ -191,6 +207,7 @@ h3 {
   list-style: none;
   margin: 0;
   padding: 0;
+  /*background-image: url("../images/shade-drone-grey.png") !important;*/
 }
 
 .morph .round:hover div.after ul li {
@@ -235,6 +252,12 @@ h3 {
   display: inline-block;
 }
 
+.references {
+  position: relative;
+  margin: auto;
+  overflow: hidden !important;
+}
+
 .references img {
   width: auto;
   height: inherit;
@@ -265,6 +288,7 @@ h3 {
   .slideshow-container .text {
     font-size: 0.9em;
     width: 14%;
+    margin-left: 41%;
   }
   .round {
     width: 13em !important;
@@ -273,6 +297,10 @@ h3 {
 
   .morph {
     height: 30em !important;
+  }
+
+  .morph #image {
+    height: 26em !important;
   }
 
   .references .vertical-align {
@@ -290,7 +318,7 @@ h3 {
   .slideshow-container .text {
     font-size: 0.8em;
     width: 18%;
-    margin-left: 41%;
+    margin-left: 39%;
   }
 
   .slideshow-container .numbertext {
@@ -298,6 +326,7 @@ h3 {
     width: 10%;
     margin-left: 45%;
   }
+
   .round {
     width: 12em !important;
     height: 12em !important;
@@ -305,6 +334,15 @@ h3 {
 
   .morph {
     height: 40em !important;
+  }
+
+  .morph #image {
+    height: 36em !important;
+  }
+
+  .morph .round div.after {
+    display: none;
+    font-size: 1em;
   }
 
   .references .vertical-align {
@@ -316,19 +354,19 @@ h3 {
 
 @media only screen and (min-width: 300px) and (max-width: 574px) {
   .slideshow-container img {
-    height: 10em;
+    height: 10em !important;
   }
 
   .slideshow-container .text {
-    font-size: 0.7em;
-    width: 16%;
-    margin-left: 42%;
+    font-size: 0.7em !important;
+    width: 16% !important;
+    margin-left: 39% !important;
   }
 
   .slideshow-container .numbertext {
-    font-size: 0.6em;
-    width: 8%;
-    margin-left: 46%;
+    font-size: 0.6em !important;
+    width: 8% !important;
+    margin-left: 46% !important;
   }
 
   .round {
@@ -338,6 +376,15 @@ h3 {
 
   .morph {
     height: 59em !important;
+  }
+
+  .morph #image {
+    display: none !important;
+  }
+
+  .morph .round div.after {
+    display: none;
+    font-size: 0.9em;
   }
 
   .references .vertical-align {

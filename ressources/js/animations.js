@@ -20,3 +20,10 @@ $(window).scroll(function() {
       $('#navbarBrand').removeClass("small");
     }
 });
+
+$(document).ready(function(){
+$('[data-toggle="popover"]').popover({
+placement : 'top',
+trigger : 'hover'
+});
+});

@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr" prefix="og: http://ogp.me/ns#">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61470250-2"></script>
+    <script src="../ressources/js/google-analytics.js"></script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="title" content="Geo2R - Votre spécialiste de l'imagerie aérienne par Drone" />
     <meta name="description" content="Geo2R est spécialiste de l'imagerie et des prises de vue par drone. Nous intervenons sur différents domaines :énergie, BTP , agriculture..." />
+    <meta name="keywords" content="accueil, drone, imagerie technique, cartographie, inspection, intégration3d, modélisation3d, audiovisuel, références, réalisations, prise de vue aérienne">
     <meta name="author" content="">
     <meta property="og:title" content="Accueil GEO2R" />
     <meta property="og:type" content="Accueil" />
@@ -14,7 +19,7 @@
     <meta property="og:image" content="http://www.geo2r.com/ressources/images/logo-geo2r-blanc.png" />
     <link rel="icon" href="../ressources/images/logo.png">
 
-    <title>Geo2R - Votre spécialiste de l'imagerie aérienne par Drone</title>
+    <title>Geo2R - Votre spécialiste de l'imagerie technique par drone</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -71,14 +76,14 @@
               </li>
             </ul>
           </div>
-          <a class="navbar-media" href="https://www.facebook.com/pages/GEO2R/809948345759365?fref=ts">
+          <a class="navbar-media" href="https://www.facebook.com/pages/GEO2R/809948345759365?fref=ts" data-toggle="popover" data-placement="top" data-content="Facebook">
             <img src="../ressources/images/logo-facebook.png" class="d-inline-block align-top social-network" alt="logo-facebook">
           </a>
-          <a class="navbar-media" href="https://www.linkedin.com/company/geo2r/">
+          <a class="navbar-media" href="https://www.linkedin.com/company/geo2r/" data-toggle="popover" data-placement="top" data-content="LinkedIn">
             <img src="../ressources/images/logo-linkedin.png" class="d-inline-block align-top social-network" alt="logo-linkedin">
           </a>
-          <a class="navbar-media" href="https://www.youtube.com/channel/UCEe42DZ5StJjWyXCiRmf0LQ">
-            <img src="../ressources/images/logo-youtube.png" class="d-inline-block align-top social-network" alt="logo-linkedin">
+          <a class="navbar-media" href="https://www.youtube.com/channel/UCEe42DZ5StJjWyXCiRmf0LQ" data-toggle="popover" data-placement="top" data-content="Youtube">
+            <img src="../ressources/images/logo-youtube.png" class="d-inline-block align-top social-network" alt="logo-youtube">
           </a>
         </nav>
 
@@ -87,7 +92,7 @@
         <main class="container">
           <div class="row">
             <div class="d-none d-lg-block col-lg-2"></div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered" data-aos="fade-right" data-aos-anchor=".wrapper">
               <img src="../../ressources/images/icon-search.png" class="icone" alt="Icone Search">
               <div class="vertical-align">
                 <h4>PRECISION</h4>
@@ -96,7 +101,7 @@
                 <p>De l'ordre du cm</p>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered" data-aos="fade-right" data-aos-anchor=".wrapper">
               <img src="../../ressources/images/icon-timer.png" class="icone" alt="Icone Timer">
               <div class="vertical-align">
                 <h4>RAPIDITE</h4>
@@ -105,14 +110,14 @@
                 <p>Mise en oeuvre rapide et efficace</p>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered" data-aos="fade-left" data-aos-anchor=".wrapper">
               <img src="../../ressources/images/icon-currency.png" class="icone" alt="Icone Currency">
               <div class="vertical-align">
                 <h4>ECONOMIE</h4>
               </div>
               <p>Optimiser vos ressources : hommes, temps, matériels...</p>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered" data-aos="fade-left" data-aos-anchor=".wrapper">
               <img src="../../ressources/images/icon-lock.png" class="icone" alt="Icone Lock">
               <div class="vertical-align">
                 <h4>SECURITE</h4>
@@ -128,48 +133,54 @@
           <div class="row ">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 centered foreground">
               <div class="foreground" data-aos="fade-right" data-aos-anchor=".morph">
-                <div class="round" id="first">
-                  <div class="before">Inspection</div>
-                  <div class="after">
-                    <ul>
-                      <li>Visible & thermique</li>
-                      <li>Toiture / cheminée</li>
-                      <li>Ouvrage d'art</li>
-                      <li>Infrastructure</li>
-                      <li>Solaire / éolien / énergies</li>
-                    </ul>
+                <a href="services/inspection">
+                  <div class="round" id="first">
+                    <div class="before">Inspection</div>
+                    <div class="after">
+                      <ul>
+                        <li>Visible & thermique</li>
+                        <li>Toiture / cheminée</li>
+                        <li>Ouvrage d'art</li>
+                        <li>Infrastructure</li>
+                        <li>Solaire / éolien / énergies</li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 centered foreground">
               <div class="foreground" data-aos="fade-down" data-aos-anchor=".morph">
-                <div class="round" id="second">
-                  <div class="before">Cartographie</div>
-                  <div class="after">
-                    <ul>
-                      <li>Orthophotoplan géoréférencé</li>
-                      <li>Modèle numérique de terrain et/ou de surface</li>
-                      <li>Modèle numérique d'altitude</li>
-                    </ul>
+                <a href="services/cartographie">
+                  <div class="round" id="second">
+                    <div class="before">Cartographie</div>
+                    <div class="after">
+                      <ul>
+                        <li>Orthophotoplan géoréférencé</li>
+                        <li>Modèle numérique de terrain et/ou de surface</li>
+                        <li>Modèle numérique d'altitude</li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 centered foreground">
               <div class="foreground" data-aos="fade-left" data-aos-anchor=".morph">
-                <div class="round" id="third">
-                  <div class="before">Audiovisuel</div>
-                  <div class="after">
-                    <ul>
-                      <li>Mise en valeur</li>
-                      <li>Vidéos et images promotionnelles</li>
-                      <li>Réalité Virtuelle (VR 360°)</li>
-                    </ul>
+                <a href="services/audiovisuel">
+                  <div class="round" id="third">
+                    <div class="before">Audiovisuel</div>
+                    <div class="after">
+                      <ul>
+                        <li>Mise en valeur</li>
+                        <li>Vidéos et images promotionnelles</li>
+                        <li>Réalité Virtuelle (VR 360°)</li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           <div class="sr-only" id="next-line">Toggle Next Line</div>
@@ -177,30 +188,34 @@
           <div class="d-none d-md-block col-lg-2 col-md-2"></div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 centered foreground">
             <div class="foreground" data-aos="fade-up-right" data-aos-anchor="#next-line">
-              <div class="round" id="fourth">
-                <div class="before">Intégration 3D</div>
-                <div class="after">
-                  <ul>
-                    <li>Intégration dans l'environnement réel</li>
-                    <li>Promotion de projets architecturaux</li>
-                  </ul>
+              <a href="services/integration3d">
+                <div class="round" id="fourth">
+                  <div class="before">Intégration 3D</div>
+                  <div class="after">
+                    <ul>
+                      <li>Intégration dans l'environnement réel</li>
+                      <li>Promotion de projets architecturaux</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 centered foreground">
             <div class="foreground" data-aos="fade-up-left" data-aos-anchor="#next-line">
-              <div class="round" id="fifth">
-                <div class="before">Modélisation 3D</div>
-                <div class="after">
-                  <ul>
-                    <li>Relevé de l'existant</li>
-                    <li>Diagnostiques travaux</li>
-                    <li>Plan toiture / façade...</li>
-                  </ul>
+              <a href="services/modelisation3d">
+                <div class="round" id="fifth">
+                  <div class="before">Modélisation 3D</div>
+                  <div class="after">
+                    <ul>
+                      <li>Relevé de l'existant</li>
+                      <li>Diagnostiques travaux</li>
+                      <li>Plan toiture / façade...</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -211,30 +226,36 @@
       <!-- Slideshow container -->
       <div class="slideshow-container container">
         <div class="row">
-          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left"></div>
+          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left" data-aos="slide-right" data-aos-anchor=".slideshow-container" data-aos-duration="300"  data-aos-easing="ease-in-sine"></div>
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
             <h2>REALISATIONS</h2>
           </div>
-          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
+          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right" data-aos="slide-left" data-aos-anchor=".slideshow-container" data-aos-duration="300"  data-aos-easing="ease-in-sine"></div>
         </div>
 
         <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="../ressources/images/exemple-prise-de-vue.jpg" alt="Exemple prise de vue">
+          <div class="text"><a href="services/audiovisuel">Audiovisuel</a></div>
+          <div class="numbertext">1 / 4</div>
+        </div>
+
         <div class="mySlides">
           <img src="../ressources/images/exemple-cartographie.jpg" alt="Exemple cartographie">
           <div class="text"><a href="services/cartographie">Cartographie</a></div>
-          <div class="numbertext">1 / 3</div>
+          <div class="numbertext">2 / 4</div>
         </div>
 
         <div class="mySlides">
           <img src="../ressources/images/suivi-de-chantier-BTP.jpg" alt="Exemple inspection">
           <div class="text"><a href="services/inspection">Inspection</a></div>
-          <div class="numbertext">2 / 3</div>
+          <div class="numbertext">3 / 4</div>
         </div>
 
         <div class="mySlides fade">
           <img src="../ressources/images/thermo-batiment.jpg" alt="Exemple inspection">
           <div class="text"><a href="services/inspection">Inspection</a></div>
-          <div class="numbertext">3 / 3</div>
+          <div class="numbertext">4 / 4</div>
         </div>
 
         <!-- Next and previous buttons -->
@@ -247,43 +268,44 @@
         <div class="dot" onclick="currentSlide(1)"></div>
         <div class="dot" onclick="currentSlide(2)"></div>
         <div class="dot" onclick="currentSlide(3)"></div>
+        <div class="dot" onclick="currentSlide(4)"></div>
       </div>
 
       <!-- References -->
       <div class="container">
         <div class="row">
-          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left"></div>
+          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left" data-aos="slide-right" data-aos-anchor=".dot-container" data-aos-duration="300"  data-aos-easing="ease-in-sine"></div>
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
             <h2>REFERENCES</h2>
           </div>
-          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right"></div>
+          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right" data-aos="slide-left" data-aos-anchor=".dot-container" data-aos-duration="300"  data-aos-easing="ease-in-sine"></div>
         </div>
         <div class="row references">
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 vertical-align">
             <img src="../ressources/images/reference-bouygues" alt="Logo Bouygues">
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 vertical-align">
-            <img src="../ressources/images/reference-eiffage" alt="Logo Bouygues">
+            <img src="../ressources/images/reference-eiffage" alt="Logo Eiffage">
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 vertical-align">
-            <img src="../ressources/images/reference-eurovia" alt="Logo Bouygues">
+            <img src="../ressources/images/reference-eurovia" alt="Logo Eurovia">
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 vertical-align">
-            <img src="../ressources/images/reference-colas" alt="Logo Bouygues">
+            <img src="../ressources/images/reference-colas" alt="Logo Colas">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 vertical-align">
-            <img src="../ressources/images/reference-polyexpert" alt="Logo Bouygues">
+            <img src="../ressources/images/reference-polyexpert" alt="Logo Polyexpert">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 vertical-align">
-            <img src="../ressources/images/reference-france-television" alt="Logo Bouygues">
+            <img src="../ressources/images/reference-france-television" alt="Logo France Television">
           </div>
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 vertical-align">
-            <img src="../ressources/images/reference-dunkerque" alt="Logo Bouygues">
+            <img src="../ressources/images/reference-dunkerque" alt="Logo Dunkerque">
           </div>
         </div>
       </div>
 
-      <div class="button-floating">
+      <div class="button-floating" data-aos="fade-left" data-aos-anchor="body">
         <a href="contact"><img src="../ressources/images/icon-email" alt="Bouton flottant Contact"></a>
       </div>
     </div> <!-- /wrapper -->

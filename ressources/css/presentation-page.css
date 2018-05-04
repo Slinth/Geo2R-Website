@@ -1,6 +1,6 @@
 /** Content PAGE PRESENTATION */
 .container {
-  overflow: auto;
+  overflow: hidden;
   text-align: justify;
 }
 
