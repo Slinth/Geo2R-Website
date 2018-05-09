@@ -303,6 +303,10 @@ h3 {
     height: 26em !important;
   }
 
+  .morph #image img {
+    margin-left: 10% !important;
+  }
+
   .references .vertical-align {
     display: flex;
     flex-direction: row;
@@ -340,6 +344,12 @@ h3 {
     height: 36em !important;
   }
 
+  .morph #image img {
+    width: 95% !important;
+    margin-left: 2.5% !important;
+    height: auto !important;
+  }
+
   .morph .round div.after {
     display: none;
     font-size: 1em;
@@ -354,19 +364,23 @@ h3 {
 
 @media only screen and (min-width: 300px) and (max-width: 574px) {
   .slideshow-container img {
-    height: 10em !important;
+    height: 9em !important;
   }
 
   .slideshow-container .text {
     font-size: 0.7em !important;
-    width: 16% !important;
-    margin-left: 39% !important;
+    width: 22% !important;
+    margin-left: 36% !important;
   }
 
   .slideshow-container .numbertext {
     font-size: 0.6em !important;
     width: 8% !important;
     margin-left: 46% !important;
+  }
+
+  .slideshow-container .prev, .next {
+    color: var(--main-orange) !important;
   }
 
   .round {

@@ -102,7 +102,7 @@ h2 {
     height: 13em;
   }
 
-  ul {
+  .container ul {
     padding-left: 6em !important;
   }
 
@@ -126,7 +126,7 @@ h2 {
     border-left: 0 !important;
   }
 
-  ul {
+  .container ul {
     padding-left: 3em !important;
   }
 
