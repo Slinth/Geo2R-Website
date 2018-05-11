@@ -143,6 +143,13 @@ video {
 }
 
 /* BARRES DE NAVIGATION */
+/* Premiere barre */
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active {
+  background-color: var(--main-orange);
+  color: white;
+}
+
+/* Deuxieme barre */
 .bg-dark {
   background-color: var(--main-dark) !important;
 }
@@ -155,6 +162,11 @@ video {
 .nav-item {
   margin-left: 1em;
   margin-right: 1em;
+}
+
+.navbar-nav {
+  flex: 1;
+  justify-content: center;
 }
 
 .navbar-nav .nav-link {
@@ -175,6 +187,30 @@ video {
     display: none;
 }
 
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--main-light-orange) !important;
+ }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: lightgrey;
+}
+
+.navbar-dark .navbar-title {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active {
+  background-color: var(--main-orange);
+  color: white;
+}
+
+/* Réseaux sociaux */
+.navbar-collapse .social-network {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
 .navbar-media {
     float: right;
     display: inline-block;
@@ -185,12 +221,6 @@ video {
     line-height: inherit;
     white-space: nowrap;
 }
-
-.dropdown-menu .dropdown-item:hover {
-  background-color: var(--main-light-orange) !important;
- }
-
-
 
 .icon-network {
   border: solid 2px white;
@@ -204,6 +234,7 @@ video {
   border: solid 2px var(--main-orange);
 }
 
+/* Logo */
 .navbar-brand {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -222,30 +253,7 @@ video {
   height: 3.5rem;
 }
 
-/* Premiere barre */
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active {
-  background-color: var(--main-orange);
-  color: white;
-}
-
-/* Deuxieme barre */
-.navbar-dark .navbar-nav .nav-link {
-  color: lightgrey;
-}
-
-.navbar-dark .navbar-title {
-  color: white;
-}
-
-.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active {
-  background-color: var(--main-orange);
-  color: white;
-}
-
-.navbar-collapse .social-network {
-  display: none;
-}
-
+/* BANDEAU TITRE PAGE */
 .container-title {
   background-color: var(--main-orange) !important;
   display: inline-block;
@@ -344,6 +352,7 @@ header .navbar-collapse {
   margin-top: 10px !important;
 }
 
+/* Redimensionnement image Geo2R au scroll */
 .navbar-brand img.small {
   width: auto;
   height: 3.5rem;
@@ -429,6 +438,14 @@ header .navbar-collapse {
     font-size: 0.9rem;
    }
 
+   .icon-network {
+     border: solid 2px white;
+     padding: 5px;
+     border-radius: 25px;
+     width: 1.3em;
+     height: 1.3em;
+   }
+
    .footer img {
      padding-top: 12%;
    }
@@ -438,19 +455,6 @@ header .navbar-collapse {
   .container {
     margin-top: 2rem;
     margin-bottom: 2rem;
-  }
-
-  .navbar-media {
-    display: none !important;
-  }
-
-  .navbar-collapse .social-network {
-    display: inline-block !important;
-    width: 100%;
-  }
-
-  .social-network .navbar-media {
-    display: inline-block !important;
   }
 
   .nav-link {
@@ -481,19 +485,6 @@ header .navbar-collapse {
     margin-left: 5% !important;
   }
 
-  .navbar-media {
-    display: none !important;
-  }
-
-  .navbar-collapse .social-network {
-    display: inline-block !important;
-    width: 100%;
-  }
-
-  .social-network .navbar-media {
-    display: inline-block !important;
-  }
-
   .nav-link {
     padding-left: 1em !important;
     padding-right: 1em !important;
@@ -502,6 +493,14 @@ header .navbar-collapse {
   .justify-content-md-center {
     margin-top: 2em;
     margin-bottom: 0em !important;
+  }
+
+  .icon-network {
+    border: solid 2px white;
+    padding: 5px;
+    border-radius: 25px;
+    width: 1.2em;
+    height: 1.2em;
   }
 
   .navbar-brand {
