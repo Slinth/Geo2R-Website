@@ -21,10 +21,20 @@ h3 {
   color: var(--main-light-orange);
 }
 
-ul {
+/** Section Societe */
+.content img {
+  margin: auto;
+  width: 35%;
+  margin-top: 2em;
+}
+
+.content ul {
   list-style-type: circle;
 }
 
+
+
+/** Section Equipe */
 .centered ul {
   list-style-type: none;
   padding-left: 0;
@@ -78,10 +88,19 @@ img.portrait {
   margin-left: -3em !important;
   margin-right: -3em !important;
 }
+/** ------- */
 
 #toBeHidden {
   visibility: hidden;
   padding-top: 5em;
+}
+
+.banniere {
+  height: 5em;
+}
+
+.banniere img {
+  width: 100%;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
