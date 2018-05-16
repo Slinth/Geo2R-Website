@@ -21,6 +21,16 @@ h3 {
   color: var(--main-light-orange);
 }
 
+.centered {
+  text-align: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.section {
+  margin-bottom: 3em;
+}
+
 /** Section Societe */
 .content img {
   margin: auto;
@@ -32,43 +42,76 @@ h3 {
   list-style-type: circle;
 }
 
-
-
 /** Section Equipe */
-.centered ul {
-  list-style-type: none;
-  padding-left: 0;
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.centered ul li {
-  padding-bottom: 0.2em;
-  margin-bottom: 0.5em;
-  border-bottom: dotted 1px var(--main-light-orange);
+.flex-container ul {
+  list-style: none;
+  padding-left: 0 !important;
 }
 
-.centered ul li.orange {
-  color: var(--main-orange);
-  margin-left: 25%;
-  margin-right: 25%;
+.box {
+  min-width: 300px;
+  flex: 1 0 200px;
+  text-align: center;
+  margin: 0 1em 0 1em;
 }
 
-img.portrait {
-  width: 90%;
-  height: auto;
-  margin-top: 1em;
-  border-radius: 15%;
-}
-
-.centered {
+.portrait {
   text-align: center;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
 
-.section {
-  margin-bottom: 3em;
+.portrait ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
+.portrait ul li {
+  padding-top: 0.2em;
+  margin-bottom: 0.5em;
+  border-top: dotted 1px var(--main-light-orange);
+}
+
+.portrait ul li.orange {
+  color: var(--main-orange);
+  margin-left: 25%;
+  margin-right: 25%;
+  border-top: 0;
+}
+
+.portrait img {
+  width: 50%;
+  height: auto;
+  margin-top: 1em;
+  border-radius: 15%;
+}
+
+.portrait .link-orange {
+  margin-top: 1.5em;
+  background-color: var(--main-orange);
+  color: white;
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 5px;
+}
+
+.portrait .link-orange:hover {
+  text-decoration: none !important;
+  background-color: white;
+  color: var(--main-orange);
+  border: solid 1px var(--main-orange);
+}
+/* ------ */
+
+
+/** CROSSBAR */
 .col-lg-4.cross-bar, .col-md-4.cross-bar {
   border-top: solid 1px var(--main-orange);
   margin-top: 1.5em;
@@ -116,10 +159,8 @@ img.portrait {
     margin-right: 0em !important;
   }
 
-  img.portrait {
-    width: 60%;
-    height: auto;
-    margin-top: 1em;
+  .box {
+    margin-top: 2em !important;
   }
 }
 
@@ -129,10 +170,8 @@ img.portrait {
     margin-right: 0em !important;
   }
 
-  img.portrait {
-    width:55%;
-    height: auto;
-    margin-top: 1em;
+  .box {
+    margin-top: 2em !important;
   }
 }
 
@@ -143,9 +182,7 @@ img.portrait {
     margin-right: 0em !important;
   }
 
-  img.portrait {
-    width:50%;
-    height: auto;
-    margin-top: 1em;
+  .box {
+    margin-top: 2em !important;
   }
 }
