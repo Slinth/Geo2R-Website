@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Geo2R - Administration</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <form method="post" action="../../ressources/php/post-actualite.php">
+      <input type="text" placeholder="Titre" name="titre"><br/>
+      <textarea rows="3" placeholder="Texte" name="texte"></textarea><br/>
+      <input type="file" name="img"><br/>
+      <input type="submit" value="OK">
+    </form>
+    <br/>
+    <br/>
+    <form method="post" action="../../ressources/php/post-actualite.php">
+      <input type="text" placeholder="Titre" name="titre"><br/>
+      <textarea name="texte" id="editor">This is some sample content.</textarea>
+      <input type="file" name="img"><br/>
+      <input type="submit" value="OK">
+    </form>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=p6vx46n24zdhf63s9spmwwnycgjlhmknx3ee9ph06otxn8tz"></script>
+  <script>
+  tinymce.init({
+selector: 'textarea',
+plugins: 'image code',
+toolbar: 'undo redo | image code',
+
+// without images_upload_url set, Upload tab won't show up
+images_upload_url: 'postAcceptor.php',
+
+// we override default upload handler to simulate successful upload
+images_upload_handler: function (blobInfo, success, failure) {
+  setTimeout(function() {
+    // no matter what you upload, we will turn it into TinyMCE logo :)
+    success('http://moxiecode.cachefly.net/tinymce/v9/images/logo.png');
+  }, 2000);
+},
+
+init_instance_callback: function (ed) {
+  ed.execCommand('mceImage');
+}
+});
+  </script>
+
+  <script src="https://cdn.ckeditor.com/ckeditor5/10.0.0/classic/ckeditor.js"></script>
+  <script>
+			ClassicEditor
+				.create( document.querySelector( '#editor' ) )
+				.then( editor => {
+					console.log( editor );
+				} )
+				.catch( error => {
+					console.error( error );
+				} );
+		</script>
+</script>
+</html >
