@@ -24,9 +24,10 @@
          type: "POST",
          url: "../ressources/php/delete-actualite.php",
          data: { id: arg }
-       }).done(function( msg ) {
-  alert( "Actualite " + msg + " supprimee");
-});
+        }).done(function( msg ) {
+            alert( "Actualite " + msg + " supprimee");
+          });
+        location.reload();
       }
    </script>
   </head>
