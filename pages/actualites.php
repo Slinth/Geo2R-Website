@@ -11,11 +11,11 @@
 
     <meta name="title" content="Geo2R - Votre spécialiste de l'imagerie technique par drone" />
     <meta name="description" content="Geo2R est spécialiste de l'imagerie et des prises de vue par drone. Nous intervenons sur différents domaines :énergie, BTP , agriculture..." />
-    <meta name="keywords" content="mentions légales, conditions d'utilisations">
+    <meta name="keywords" content="actualites">
     <meta name="author" content="">
-    <meta property="og:title" content="Mentions Légales" />
-    <meta property="og:type" content="Page Mentions Légales GEO2R" />
-    <meta property="og:url" content="http://www.geo2r.com/mentions-legales" />
+    <meta property="og:title" content="Actualités" />
+    <meta property="og:type" content="Actualités GEO2R" />
+    <meta property="og:url" content="http://www.geo2r.com/actualites" />
     <meta property="og:image" content="http://www.geo2r.com/ressources/images/logo-geo2r-blanc.png" />
     <link rel="icon" href="../ressources/images/logo.png">
 
@@ -96,9 +96,7 @@
         <?php $actus = getActualites();
           foreach ($actus as $actu) {	?>
             <div class="actu">
-              <h2><?php echo $actu['titre'] ?></h2>
-              <p><?php echo $actu['texte'] ?></p>
-              <img src="<?php echo $actu['image'] ?>" alt="IMAGE DE L'ACTUALITE">
+              <?php echo $actu['content'] ?>
               <small> <?php echo $actu['datePost'] ?></small>
             </div>
         <?php } ?>

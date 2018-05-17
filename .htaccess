@@ -1,11 +1,23 @@
+AuthUserFile /home/georcomogd/www/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Acces Restreint : site en developpement"
+AuthType Basic
+require valid-user
+
 # BEGIN Cleaning URLs
 <IfModule mod_rewrite.c>
     RewriteEngine On
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_URI} !^pages/
+	
+	RewriteBase /
+	
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d
+	RewriteRule .* - [L]
+		
+	RewriteCond %{REQUEST_URI} !^administrator/
 	RewriteRule ^(.*)$ /pages/$1 [L,QSA]
 </IfModule>
+
 
 # END Cleaning URLs
 

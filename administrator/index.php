@@ -13,19 +13,19 @@
     <title>Geo2R - Administration</title>
 
     <!-- Custom styles for this template -->
-    <link href="../../ressources/css/main.css" rel="stylesheet">
-    <link href="../../ressources/css/actualites.css" rel="stylesheet">
+    <link href="../ressources/css/main.css" rel="stylesheet">
+    <link href="../ressources/css/actualites.css" rel="stylesheet">
 
-    <?php include('../../ressources/php/get-actualites.php'); ?>
+    <?php include('../ressources/php/get-actualites.php'); ?>
     <script>
       function deleteActu(arg) {
         console.log(arg);
         $.ajax({
          type: "POST",
-         url: "../../ressources/php/delete-actualite.php",
+         url: "../ressources/php/delete-actualite.php",
          data: { id: arg }
        }).done(function( msg ) {
-  alert( "Data Saved: " + msg );
+  alert( "Actualite " + msg + " supprimee");
 });
       }
    </script>
@@ -33,14 +33,19 @@
 
   <body>
       <div id="main" class="container">
+        <a href="ajouter-actualite">NOUVELLE ACTUALITE</a>
         <?php $actus = getAllActualites();
-          foreach ($actus as $actu) {	?>
-            <div class="actu">
-              <h2><?php echo $actu['titre'] ?></h2>
-              <small> <?php echo $actu['datePost'] ?></small>
-              <button onclick="deleteActu(<?php echo $actu['id'] ?>)">SUPPRIMER</button>
-            </div>
-        <?php } ?>
+          if (count($actus) > 0) {
+            foreach ($actus as $actu) {	?>
+              <div class="actu">
+                <?php echo $actu['id'] ?>
+                <?php echo $actu['content'] ?>
+                <button onclick="deleteActu(<?php echo $actu['id'] ?>)">SUPPRIMER</button>
+              </div>
+      <?php }
+          } else {
+            echo "Aucune actualité.";
+          }?>
       </div><!-- /container -->
     </body>
 
