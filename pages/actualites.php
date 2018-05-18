@@ -97,6 +97,7 @@
           foreach ($actus as $actu) {	?>
             <div class="actu">
               <?php echo $actu['content'] ?>
+              <div class="clearfix"></div>
               <small> <?php echo $actu['datePost'] ?></small>
             </div>
         <?php } ?>

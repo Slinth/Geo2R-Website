@@ -16,6 +16,10 @@
     <link href="../ressources/css/main.css" rel="stylesheet">
     <link href="../ressources/css/actualites.css" rel="stylesheet">
 
+    <!-- JQuery JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Script PHP / JS -->
     <?php include('../ressources/php/get-actualites.php'); ?>
     <script>
       function deleteActu(arg) {
@@ -49,7 +53,4 @@
           }?>
       </div><!-- /container -->
     </body>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
   </html>
