@@ -21,36 +21,41 @@
 
     <!-- Script PHP / JS -->
     <?php include('../ressources/php/get-actualites.php'); ?>
-    <script>
-      function deleteActu(arg) {
-        console.log(arg);
-        $.ajax({
-         type: "POST",
-         url: "../ressources/php/delete-actualite.php",
-         data: { id: arg }
-        }).done(function( msg ) {
-            alert( "Actualite " + msg + " supprimee");
-          });
-        location.reload();
+    <?php
+      if (isset($_GET['success'])) {
+        $success = $_GET['success'];
+
+        if ($success == 1) {
+          echo '<script>alert("Actualité correctement ajoutée");</script>';
+        } else if ($success == 2) {
+          echo '<script>alert("Actualité correctement modifiée");</script>';
+        } else if ($success == 3) {
+          echo '<script>alert("Actualité correctement supprimée");</script>';
+        } else if ($success == 0) {
+          echo '<script>alert("Erreur lors de l\'opération.\n Veuillez recommencer");</script>';
+        }
       }
-   </script>
+    ?>
   </head>
 
   <body>
       <div id="main" class="container">
-        <a href="ajouter-actualite">NOUVELLE ACTUALITE</a>
+        <a href="ajouter-actualite">NOUVELLE ACTUALITE</a><br/>
+        <table>
         <?php $actus = getAllActualites();
           if (count($actus) > 0) {
             foreach ($actus as $actu) {	?>
-              <div class="actu">
-                <?php echo $actu['id'] ?>
-                <?php echo $actu['content'] ?>
-                <button onclick="deleteActu(<?php echo $actu['id'] ?>)">SUPPRIMER</button>
-              </div>
+              <tr>
+                <td><?php echo $actu['id'] ?></td>
+                <td><?php echo $actu['content'] ?></td>
+                <td><a href="modifier-actualite.php?id=<?php echo $actu['id'] ?>">MODIFIER</button></td>
+                <td><a href="../ressources/php/delete-actualite.php?id=<?php echo $actu['id'] ?>">SUPPRIMER</button></td>
+              </tr>
       <?php }
           } else {
             echo "Aucune actualité.";
           }?>
+        </table>
       </div><!-- /container -->
     </body>
   </html>

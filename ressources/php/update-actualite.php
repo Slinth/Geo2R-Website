@@ -1,20 +1,20 @@
 <?php
   $content = $_POST['content'];
+  $id = $_POST['id'];
 
   include 'bdd.php';
 
-  /*$connection = new PDO('mysql:host=localhost;dbname=geo2r;charset=utf8', 'root', '') or die(mysql_error());
-  $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);*/
-
   if (isset($content)) {
-    $query = 'INSERT INTO actualites(content) VALUES (?)';
+    echo $id;
+    echo $content;
+    $query = 'UPDATE actualites SET content=? WHERE id=?';
     $req = $connection->prepare($query);
     $req->bindValue(1, $content, PDO::PARAM_STR);
+    $req->bindValue(2, $id, PDO::PARAM_INT);
     $res = $req->execute();
 
-
     if($res) {
-      header("Location:../../administrator/index.php?success=3");
+      header("Location:../../administrator/index.php?success=2");
     } else {
       header("Location:../../administrator/index.php?success=0");
     }

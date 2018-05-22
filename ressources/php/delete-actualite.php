@@ -1,5 +1,5 @@
 <?php
-  $id = $_POST['id'];
+  $id = $_GET['id'];
 
   include 'bdd.php';
 
@@ -7,10 +7,14 @@
   $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);*/
 
   if (isset($id)) {
-    echo $id;
     $query = 'DELETE FROM actualites WHERE id=?';
     $req = $connection->prepare($query);
     $req->bindValue(1, $id, PDO::PARAM_INT);
-    $req->execute();
+    $res = $req->execute();
+    if ($res) {
+      header("Location:../../administrator/index.php?success=3");
+    }
+  } else {
+      header("Location:../../administrator/index.php?success=0");
   }
 ?>
