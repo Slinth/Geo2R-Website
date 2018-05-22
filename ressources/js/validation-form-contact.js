@@ -55,25 +55,3 @@ function submitV2() {
     form.classList.add('was-validated');
   }, false);
 }
-
-/*
-$("#FormContact").submit(function() {
-  $.post(
-    "../ressources/php/send-email.php",
-    {
-      prenom : $("#input-prenom").val(),
-      nom : $("#input-prenom").val(),
-      tel : $("#input-tel").val(),
-      mail : $("#input-email").val(),
-      message : $("#input-message").val(),
-      captchaResponse : grecaptcha.getResponse()
-    })
-    .done(function(response) {
-      alert("Votre message a bien été envoyé." + response);
-      console.log("MESSAGE ENVOYE");
-    }).fail(function() {
-      alert("Erreur lors de l'envoi de votre message.\nVeuillez recommencer.");
-      console.log("MESSAGE ENVOYE");
-    });
-});
-*/

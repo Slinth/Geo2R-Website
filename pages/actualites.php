@@ -144,15 +144,40 @@
       </div>
     </footer>
 
+    <div class="d-none" id="bootstrapCssTest">bootstrapCssTest</div>
 
-      <!-- Bootstrap core JavaScript -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-      <!-- AOS animations JavaScript -->
-      <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-      <script src="../ressources/js/animations.js"></script>
-      <!-- Custom JavaScript -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- AOS animations JavaScript -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
+    <!-- jQuery local fallback -->
+    <script>window.jQuery || (document.write('<script src="../ressources/js/jquery-3.2.1.min.js"><\/script>') && console.log("JQ : Local"))</script>
+    <!-- Bootstrap JS local fallback -->
+    <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="../ressources/js/bootstrap.min.js"><\/script>');console.log("JS : Local");}</script>
+    <!-- Bootstrap CSS local fallback -->
+    <script>
+      (function($) {
+          $(function() {
+              if ($('#bootstrapCssTest').is(':visible')) {
+                  $('head').prepend('<link rel="stylesheet" href="../ressources/css/bootstrap.min.css">');
+                  console.log("CSS : Local");
+              }
+          });
+      })(window.jQuery);
+    </script>
+    <!-- AOS Animations local fallback -->
+    <script>
+      if(typeof(AOS) === 'undefined') {
+        document.write('<script src="../ressources/js/aos.js"><\/script>');
+        $('head').prepend('<link rel="stylesheet" href="../ressources/css/aos.css">');
+        console.log("AOS : local");
+      }
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="../ressources/js/animations.js"></script>
     </body>
   </html>
