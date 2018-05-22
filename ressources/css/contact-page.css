@@ -13,7 +13,7 @@
   margin-bottom: 3em;
 }
 
-iframe {
+.row .centered iframe {
   width: 85%;
   height: 100%;
   vertical-align: middle;
