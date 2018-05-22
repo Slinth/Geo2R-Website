@@ -1,3 +1,4 @@
+/** ACTUALITES.PHP */
 .actu {
   box-shadow: 2px 2px 2px 2px #bfbfbf;
   margin-bottom: 2em;
@@ -35,10 +36,74 @@
 .actu img {
   display: block;
   margin: 1em auto 0 auto;
-  max-width: 60%;
+  max-width: 45%;
   padding: 0.5em;
 }
 
 .actu p {
   word-break: break-word;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .actu img {
+    max-width: 100% !important;
+    width: 40% !important;
+    height: auto !important;
+  }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 768px) {
+  .actu img {
+    float: none !important;
+    max-width: 100% !important;
+    width: 80% !important;
+    height: auto !important;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 574px) {
+  .actu img {
+    float: none !important;
+    max-width: 100% !important;
+    width: 80% !important;
+    height: auto !important;
+  }
+}
+
+/** ADMINISTRATOR INDEX.PHP */
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  padding: 1em;
+}
+
+table {
+  margin-top: 1em;
+}
+
+table h1 {
+  color: var(--main-orange);
+  font-size: 1.3rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 2em;
+}
+
+table h2 {
+  display: none;
+}
+
+table h3 {
+  display: none;
+}
+
+table p {
+  display: none;
+}
+
+table img {
+  display: none;
 }
