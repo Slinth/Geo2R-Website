@@ -53,6 +53,8 @@ h4 {
 	height:0;
 	overflow:hidden;
   margin-bottom: 2em;
+  background: url(https://static.wixstatic.com/media/15a93c_32a6a05d3d594d599ad4b2b12d9378b2~mv2.gif) center center no-repeat;
+  background-size: 15%;
 }
 
 .video-container iframe, .video-container object, .video-container embed {
