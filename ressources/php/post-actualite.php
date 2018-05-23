@@ -1,5 +1,6 @@
 <?php
   $content = $_POST['content'];
+  $title = $_POST['title'];
 
   include 'bdd.php';
 
@@ -7,14 +8,15 @@
   $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);*/
 
   if (isset($content)) {
-    $query = 'INSERT INTO actualites(content) VALUES (?)';
+    $query = 'INSERT INTO actualites(title, content) VALUES (?, ?)';
     $req = $connection->prepare($query);
-    $req->bindValue(1, $content, PDO::PARAM_STR);
+    $req->bindValue(1, $title, PDO::PARAM_STR);
+    $req->bindValue(2, $content, PDO::PARAM_STR);
     $res = $req->execute();
 
 
     if($res) {
-      header("Location:../../administrator/index.php?success=3");
+      header("Location:../../administrator/index.php?success=1");
     } else {
       header("Location:../../administrator/index.php?success=0");
     }

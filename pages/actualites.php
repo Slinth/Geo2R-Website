@@ -13,10 +13,27 @@
     <meta name="description" content="Geo2R est spécialiste de l'imagerie et des prises de vue par drone. Nous intervenons sur différents domaines :énergie, BTP , agriculture..." />
     <meta name="keywords" content="actualites">
     <meta name="author" content="">
-    <meta property="og:title" content="Actualités" />
-    <meta property="og:type" content="Actualités GEO2R" />
-    <meta property="og:url" content="http://www.geo2r.com/actualites" />
-    <meta property="og:image" content="http://www.geo2r.com/ressources/images/logo-geo2r-blanc.png" />
+
+    <?php include('../ressources/php/get-actualites.php'); ?>
+
+    <?php
+      $id = $_GET['id'];
+      if (isset($id)) {
+        $actu = getActualiteById($id);
+    ?>
+      <meta property="og:title" content="<?php echo $actu['title'] ?>" />
+      <meta property="og:description" content="Descrition de l'actu pour le test de partage"/>
+      <meta property="og:type" content="Article" />
+      <meta property="og:url" content="http://www.geo2r.com/actualites?id=<?php echo $id ?>" />
+      <meta property="og:image" content="http://www.geo2r.com/ressources/images/logo-geo2r-blanc.png" />
+    <?php }?>
+
+    <!-- LinkedIn Sharing JavaScript -->
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+      api_key: 867iyvsbv3rjic
+      authorize: true
+    </script>
+
     <link rel="icon" href="../ressources/images/logo.png">
 
     <title>Geo2R - Votre spécialiste de l'imagerie aérienne par Drone</title>
@@ -28,8 +45,6 @@
     <!-- Custom styles for this template -->
     <link href="../ressources/css/main.css" rel="stylesheet">
     <link href="../ressources/css/actualites.css" rel="stylesheet">
-
-    <?php include('../ressources/php/get-actualites.php'); ?>
   </head>
 
   <body>
@@ -67,8 +82,8 @@
                   <a class="dropdown-item" href="presentation#reglementation">Réglementaion</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ACTUALITES</a>
+              <li class="nav-item active">
+                <a class="nav-link rounded" href="actualites">ACTUALITES</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact">CONTACT</a>
@@ -93,14 +108,34 @@
       <div class="container-title"><h1>ACTUALITES</h1></div>
 
       <div id="main" class="container">
-        <?php $actus = getActualites();
-          foreach ($actus as $actu) {	?>
-            <div class="actu">
-              <?php echo $actu['content'] ?>
-              <div class="clearfix"></div>
-              <small> <?php echo $actu['datePost'] ?></small>
-            </div>
-        <?php } ?>
+        <?php
+        if (isset($id)) {
+          $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"
+          ?>
+          <div class="actu">
+            <h1><?php echo $actu['title'] ?></h1>
+            <?php echo $actu['content'] ?>
+            <div class="clearfix"></div>
+            <small> <?php echo $actu['datePost'] ?></small>
+            <a href="http://www.linkedin.com/shareArticle?url=<?php echo $actual_link ?>" onclick="window.open(this.href, 'linkedinwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">Post on LinkedIn</a>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $actual_link ?>" target="blank">FB V1</a>
+            <a href="https://www.facebook.com/dialog/share?app_id=411317722664907&display=popup&href=<?php echo $actual_link ?>&redirect_uri=<?php echo $actual_link ?>" target="blank">FB V2</a>
+          </div>
+    <?php
+        } else {
+          $actus = getActualites();
+            foreach ($actus as $actu) {	?>
+              <div class="actu">
+                <h1><?php echo $actu['title'] ?></h1>
+                <?php echo apercuContenu($actu['content'], $actu['id']) ?>
+                <div class="clearfix"></div>
+                <div class="bottom">
+                  <small> <?php echo $actu['datePost'] ?></small>
+                  <a href='actualites?id=<?php echo $actu['id'] ?>'>Lire la suite...</a>
+                </div>
+              </div>
+        <?php }
+        } ?>
       </div><!-- /container -->
 
       <div class="button-floating" data-aos="fade-left" data-aos-anchor="body">
@@ -176,6 +211,44 @@
         console.log("AOS : local");
       }
     </script>
+
+    <!-- LinkedIn Sharing JavaScript -->
+<script type="text/javascript">
+
+  // Setup an event listener to make an API call once auth is complete
+    function onLinkedInLoad() {
+      IN.Event.on(IN, "auth", shareContent);
+    }
+
+  // Handle the successful return from the API call
+  function onSuccess(data) {
+    console.log(data);
+  }
+
+  // Handle an error response from the API call
+  function onError(error) {
+    console.log(error);
+  }
+
+  // Use the API call wrapper to share content on LinkedIn
+  function shareContent() {
+
+    // Build the JSON payload containing the content to be shared
+    var payload = {
+      "comment": "Check out developer.linkedin.com! http://linkd.in/1FC2PyG",
+      "visibility": {
+        "code": "anyone"
+      }
+    };
+
+    IN.API.Raw("/people/~/shares?format=json")
+      .method("POST")
+      .body(JSON.stringify(payload))
+      .result(onSuccess)
+      .error(onError);
+  }
+
+</script>
 
     <!-- Custom JavaScript -->
     <script src="../ressources/js/animations.js"></script>

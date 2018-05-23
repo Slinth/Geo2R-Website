@@ -19,15 +19,18 @@
   </head>
 
   <body>
+    <?php
+      include '../ressources/php/bdd.php';
+      $query = "SELECT title, content FROM actualites WHERE id=?";
+      $req = $connection->prepare($query);
+      $req->bindValue(1, $id, PDO::PARAM_INT);
+      $req->execute();
+      $res = $req->fetch();
+    ?>
     <form method="post" action="../ressources/php/update-actualite.php">
+      <input type="text" value="<?php echo $res['title'] ?>" name="title">
       <textarea name="content" id="editor">
         <?php
-          include '../ressources/php/bdd.php';
-          $query = "SELECT content FROM actualites WHERE id=?";
-          $req = $connection->prepare($query);
-          $req->bindValue(1, $id, PDO::PARAM_INT);
-          $req->execute();
-          $res = $req->fetch();
           echo $res['content'];
         ?>
       </textarea>
@@ -42,4 +45,4 @@
       extraPlugins: 'imageuploader'
     });
 	</script>
-</html >
+</html>

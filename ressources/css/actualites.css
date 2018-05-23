@@ -6,6 +6,25 @@
   overflow: auto;
 }
 
+.actu .bottom h1, h2, h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  font-family: sans-serif !important;
+  font-size: 1em !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+}
+
+.actu .bottom small {
+  color: #A9A9A9;
+}
+
+.actu .bottom a {
+  float: right;
+}
+
 .actu h1 {
   color: var(--main-orange);
   font-size: 1.3rem;

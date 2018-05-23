@@ -42,12 +42,12 @@
       <div id="main" class="container">
         <a href="ajouter-actualite">NOUVELLE ACTUALITE</a><br/>
         <table>
-        <?php $actus = getAllActualites();
+        <?php $actus = getFullActualites();
           if (count($actus) > 0) {
             foreach ($actus as $actu) {	?>
               <tr>
                 <td><?php echo $actu['id'] ?></td>
-                <td><?php echo $actu['content'] ?></td>
+                <td><h1><?php echo $actu['title'] ?></h1></td>
                 <td><a href="modifier-actualite.php?id=<?php echo $actu['id'] ?>">MODIFIER</button></td>
                 <td><a href="../ressources/php/delete-actualite.php?id=<?php echo $actu['id'] ?>">SUPPRIMER</button></td>
               </tr>
