@@ -271,13 +271,13 @@ h3 {
   height: 5em;
 }
 
-.references .vertical-align > [class^="col-"],
-.references .vertical-align > [class*=" col-"] {
+.references > [class^="col-"],
+.references > [class*=" col-"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
