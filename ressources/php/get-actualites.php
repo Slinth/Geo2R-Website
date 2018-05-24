@@ -3,7 +3,24 @@
       if (strlen ($origine) <= 400)
           return $origine;
 
-      $debut = substr ($origine, 0, 400);
+      /*$debut = substr ($origine, 0, 400);
+      $debut = substr ($debut, 0, strrpos ($debut, ' ')) . '...';*/
+      $content = strip_tags($origine, '<h2><img><h3><p>');
+      $posFin = strpos($content, '</', 400);
+      $posDeb = strpos($content, '>', $posFin);
+      $fin = substr($content, $posFin, ($posDeb - $posFin) + 1);
+
+      $debut = substr($content, 0, $posFin);
+
+      return $debut.$fin;
+    }
+
+    function apercuContenu2 ($origine) {
+      if (strlen ($origine) <= 400)
+          return $origine;
+
+      $content = strip_tags($origine, '<h2><img><h3><p>');
+      $debut = substr ($content, 0, 400);
       $debut = substr ($debut, 0, strrpos ($debut, ' ')) . '...';
 
       return $debut;
