@@ -1,0 +1,9 @@
+AuthUserFile /home/georcomogd/www/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Acces Restreint : Administration"
+AuthType Basic
+require valid-user
+
+
+
+

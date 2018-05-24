@@ -22,10 +22,10 @@
         $actu = getActualiteById($id);
     ?>
       <meta property="og:title" content="<?php echo $actu['title'] ?>" />
-      <meta property="og:description" content="Descrition de l'actu pour le test de partage"/>
+      <meta property="og:description" content="<?php echo strip_tags($actu['content']); ?>"/>
       <meta property="og:type" content="Article" />
-      <meta property="og:url" content="http://www.geo2r.com/actualites?id=<?php echo $id ?>" />
-      <meta property="og:image" content="http://www.geo2r.com/ressources/images/logo-geo2r-blanc.png" />
+      <meta property="og:url" content="http://dev.geo2r.fr/actualites?id=<?php echo $id ?>" />
+      <meta property="og:image" content="http://dev.geo2r.fr/ressources/images/logo-geo2r-noir.jpg" />
     <?php }?>
 
     <!-- LinkedIn Sharing JavaScript -->
@@ -118,8 +118,8 @@
             <div class="clearfix"></div>
             <small> <?php echo $actu['datePost'] ?></small>
             <a href="http://www.linkedin.com/shareArticle?url=<?php echo $actual_link ?>" onclick="window.open(this.href, 'linkedinwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">Post on LinkedIn</a>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $actual_link ?>" target="blank">FB V1</a>
-            <a href="https://www.facebook.com/dialog/share?app_id=411317722664907&display=popup&href=<?php echo $actual_link ?>&redirect_uri=<?php echo $actual_link ?>" target="blank">FB V2</a>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $actual_link ?>" onclick="window.open(this.href, 'facebookwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">FB V1</a>
+            <a href="https://www.facebook.com/dialog/share?app_id=411317722664907&display=popup&href=<?php echo $actual_link ?>&redirect_uri=<?php echo $actual_link ?>" onclick="window.open(this.href, 'facebookwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">FB V2</a>
           </div>
     <?php
         } else {
@@ -127,7 +127,7 @@
             foreach ($actus as $actu) {	?>
               <div class="actu">
                 <h1><?php echo $actu['title'] ?></h1>
-                <?php echo apercuContenu($actu['content'], $actu['id']) ?>
+                <?php echo apercuContenu($actu['content']) ?>
                 <div class="clearfix"></div>
                 <div class="bottom">
                   <small> <?php echo $actu['datePost'] ?></small>
@@ -211,44 +211,6 @@
         console.log("AOS : local");
       }
     </script>
-
-    <!-- LinkedIn Sharing JavaScript -->
-<script type="text/javascript">
-
-  // Setup an event listener to make an API call once auth is complete
-    function onLinkedInLoad() {
-      IN.Event.on(IN, "auth", shareContent);
-    }
-
-  // Handle the successful return from the API call
-  function onSuccess(data) {
-    console.log(data);
-  }
-
-  // Handle an error response from the API call
-  function onError(error) {
-    console.log(error);
-  }
-
-  // Use the API call wrapper to share content on LinkedIn
-  function shareContent() {
-
-    // Build the JSON payload containing the content to be shared
-    var payload = {
-      "comment": "Check out developer.linkedin.com! http://linkd.in/1FC2PyG",
-      "visibility": {
-        "code": "anyone"
-      }
-    };
-
-    IN.API.Raw("/people/~/shares?format=json")
-      .method("POST")
-      .body(JSON.stringify(payload))
-      .result(onSuccess)
-      .error(onError);
-  }
-
-</script>
 
     <!-- Custom JavaScript -->
     <script src="../ressources/js/animations.js"></script>
