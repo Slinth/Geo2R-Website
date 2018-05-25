@@ -1,12 +1,12 @@
 <?php
     function apercuContenu ($origine) {
-      if (strlen ($origine) <= 400)
+      if (strlen ($origine) <= 200)
           return $origine;
 
       /*$debut = substr ($origine, 0, 400);
       $debut = substr ($debut, 0, strrpos ($debut, ' ')) . '...';*/
       $content = strip_tags($origine, '<h2><img><h3><p>');
-      $posFin = strpos($content, '</', 400);
+      $posFin = strpos($content, '</', 200);
       $posDeb = strpos($content, '>', $posFin);
       $fin = substr($content, $posFin, ($posDeb - $posFin) + 1);
 

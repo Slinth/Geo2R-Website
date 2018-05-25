@@ -60,6 +60,12 @@
   height: auto !important;
 }
 
+.actu table {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+}
+
 .actu p {
   word-break: break-word;
 }
