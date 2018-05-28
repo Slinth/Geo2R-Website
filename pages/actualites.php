@@ -53,7 +53,7 @@
       <header class="sticky-top bg-dark">
         <nav class="navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="home">
-            <img id="navbarBrand" src="../../ressources/images/logo-geo2r-blanc.png" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
+            <img id="navbarBrand" src="../../ressources/images/logo-geo2r-blanc-small.png" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -155,7 +155,7 @@
             <li>contact@geo2r.com</li>
           </ul>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="../../ressources/images/logo-geo2r-blanc-small.png" alt="Geo2R - Imagerie aérienne par Drone"></div>
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 content">
           <p class="right">PLAN DU SITE</p>
           <ul class="right">
