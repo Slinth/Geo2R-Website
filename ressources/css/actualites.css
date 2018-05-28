@@ -61,13 +61,23 @@
 }
 
 .actu table {
-  display: block;
+  display: table;
   margin: 0 auto;
-  width: 75%;
+  min-width: 50% !important;
+  max-width: 75%;
+  table-layout: fixed;
 }
 
 .actu p {
   word-break: break-word;
+}
+
+.actu .share-buttons {
+  float: right;
+}
+
+.share-buttons .IN-widget {
+  vertical-align: middle !important;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {

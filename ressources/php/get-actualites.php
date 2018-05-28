@@ -31,7 +31,7 @@
     /*
     $connection = new PDO('mysql:host=localhost;dbname=geo2r;charset=utf8', 'root', '') or die(mysql_error());
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);*/
-		$query = 'SELECT * FROM actualites ORDER BY datePost DESC LIMIT 5';
+		$query = 'SELECT * FROM actualites ORDER BY datePost DESC';
 		$stmt = $connection->prepare($query);
 		$stmt->execute();
 		$lesActualites = $stmt->fetchAll();
@@ -40,7 +40,7 @@
 
   function getFullActualites() {
     include 'bdd.php';
-		$query = 'SELECT * FROM actualites ORDER BY datePost DESC LIMIT 5';
+		$query = 'SELECT * FROM actualites ORDER BY datePost DESC';
 		$stmt = $connection->prepare($query);
 		$stmt->execute();
 		$lesActualites = $stmt->fetchAll();

@@ -30,6 +30,7 @@
 
     <!-- LinkedIn Sharing JavaScript -->
     <script type="text/javascript" src="//platform.linkedin.com/in.js">
+      lang: fr_FR
       api_key: 867iyvsbv3rjic
       authorize: true
     </script>
@@ -117,9 +118,10 @@
             <?php echo $actu['content'] ?>
             <div class="clearfix"></div>
             <small> <?php echo $actu['datePost'] ?></small>
-            <a href="http://www.linkedin.com/shareArticle?url=<?php echo $actual_link ?>" onclick="window.open(this.href, 'linkedinwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">Post on LinkedIn</a>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $actual_link ?>" onclick="window.open(this.href, 'facebookwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">FB V1</a>
-            <a href="https://www.facebook.com/dialog/share?app_id=411317722664907&display=popup&href=<?php echo $actual_link ?>&redirect_uri=<?php echo $actual_link ?>" onclick="window.open(this.href, 'facebookwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">FB V2</a>
+            <div class="share-buttons">
+              <div class="fb-share-button" data-href="<?php echo $actual_link ?>" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdev.geo2r.fr%2Factualites%3Fid%3D%253C%253Fphp%2Becho%2B%2524id%2B%253F%253E&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager</a></div>
+              <script type="IN/Share" data-url="<?php echo $actual_link ?>"></script>
+            </div>
           </div>
     <?php
         } else {
@@ -214,5 +216,15 @@
 
     <!-- Custom JavaScript -->
     <script src="../ressources/js/animations.js"></script>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0&appId=411317722664907';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     </body>
   </html>
