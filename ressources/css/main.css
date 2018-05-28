@@ -535,4 +535,8 @@ header .navbar-collapse {
   .button-floating {
     display: none !important;
   }
+
+  .social-network {
+    margin-top: 0.5em !important;
+  }
 }

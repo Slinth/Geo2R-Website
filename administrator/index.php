@@ -14,7 +14,7 @@
 
     <!-- Custom styles for this template -->
     <link href="../ressources/css/main.css" rel="stylesheet">
-    <link href="../ressources/css/actualites.css" rel="stylesheet">
+    <link href="../ressources/css/actualites-page.css" rel="stylesheet">
 
     <!-- JQuery JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

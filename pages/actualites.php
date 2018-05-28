@@ -45,7 +45,7 @@
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="../ressources/css/main.css" rel="stylesheet">
-    <link href="../ressources/css/actualites.css" rel="stylesheet">
+    <link href="../ressources/css/actualites-page.css" rel="stylesheet">
   </head>
 
   <body>
