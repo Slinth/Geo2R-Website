@@ -49,7 +49,7 @@ h4 {
 .video-container {
 	position:relative;
 	padding-bottom:56.25%;
-	padding-top:30px;
+	padding-top:0px;
 	height:0;
 	overflow:hidden;
   margin-bottom: 2em;
@@ -100,7 +100,7 @@ h4 {
 
 .paragraph {
   margin-bottom: 2em;
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .paragraph.text-center {

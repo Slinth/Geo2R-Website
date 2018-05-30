@@ -131,30 +131,52 @@
         <div class="row">
           <div class="d-none d-md-block col-md-2 col-lg-2"></div>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 content justified">
+            <p>La cartographie aérienne par drone est un outil rapide, précis et compétitif, qui va pouvoir géo-référencer et reconstituer en 3D et en 2D votre site.</p>
+            <p>Cet outil offre aussi bien une vision précise que globale.</p>
+
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/sVIpEfGdfF4" class="main-image" style="border:0; height: 100%; width: 100%" allowfullscreen></iframe>
+            </div>
+
+            <div class="paragraph">
+              <p>Nous proposons des solutions adaptées à vos besoins :
+                <ul>
+                  <li>Orthophotoplan de précion (précision centimétrique; géoréférencé dans le repère choisi : Lambert, WGS 84, ...)</li>
+                  <li>Modèle numérique de Terrain (MNT) / Modèle numérique de Surface (MNS) (nuage de points, courbe de niveau, ...)</li>
+                  <li>Modèle 3D texturisé (PLY, OBJ, ...)</li>
+                  <li>Outils d'aide à la décision</li>
+                </ul>
+              </p>
+            </div>
+
+            <small>Passez votre curseur sur la photo pour obtenir un zoom de la zone (un temps de chargement pour la haute qualité peut être requis)</small>
             <div class="pictures">
-              <a href="../../ressources/images/GIF-cartographie.gif" onclick="window.open(this.href); return false;"><img src="../../ressources/images/GIF-cartographie.gif" class="main-image" alt="Exemple cartographie"></a>
-            </div>
-
-            <p>La cartographie par drone est un outils peu couteux, qui a pour avantages de pouvoir géoréférencer facilement l'ensemble de votre site. Cet outil offre aussi bien une vision précise que globale.</p>
-            <p>Du simple relevé photo à l'acquisition plus complexe via des images géotaggées prises par drone, nous réalisons des orthophotoplans de haute précision (jusqu'à 2 cm/pixel : GPS < 10cm) ainsi que des modélisations numériques de surfaces et de terrains.</p>
-
-            <div class="paragraph">
-              <h2>MODELE NUMERIQUE DE TERRAIN</h2>
-              <a href="../../ressources/images/MNT3D.jpg" onclick="window.open(this.href); return false;"><img class="left" src="../../ressources/images/MNT3D.jpg" alt="Modèle numérique de terrain"></a>
-              <p>Hors infrastructures et végétations</p>
+              <div data-zoom="../../ressources/images/exemple-cartographie.jpg" class="zoom">
+                <img src="../../ressources/images/exemple-cartographie-small.jpg" class="main-image" alt="Exemple cartographie">
+              </div>
             </div>
 
             <div class="paragraph">
-              <h2>MODELE NUMERIQUE DE SURFACE</h2>
-              <a href="../../ressources/images/MNS.jpg" onclick="window.open(this.href); return false;"><img class="right" src="../../ressources/images/MNS.jpg" alt="Modèle numérique de surface"></a>
-              <p>Avec infrastructures et végétations</p>
+              <h2>DOMAINES D'APPLICATIONS</h2>
+              <p><b>Urbanisme : </b> plan local d'urbanisme (PLU), outil de travail et d'aide à la décision pour vos projets</p>
+              <p><b>BTP : </b> modèle numérique de surface (ou terrain), volumes et cubature, voiries, réseaux, courbes de niveaux...</p>
+              <p><b>Géomètre : </b> cartographie de surface ou terrain, référencement cimetière</p>
+              <p><b>Géologie : </b> modélisation des reliefs, falaises, crevasses pour inspection et/ou étude d'érosion</p>
+              <p><b>Bureau d'étude / architecte : </b> implémentation de bâtiment, terrassement, extension...</p>
             </div>
-
-            <p>Nos outils deviendront vite indispensables pour vos futurs travaux et services SIG, que ce soit pour une friche industrielle, une nouvelle zone d'activité ou tout autre projet.</p>
 
             <div class="pictures">
               <a href="../../ressources/images/MNT-MNS.png" onclick="window.open(this.href); return false;"><img src="../../ressources/images/MNT-MNS.png" class="main-image" alt="MNT VS MNS"></a>
             </div>
+
+            <div class="paragraph">
+              <h2>COMMENT / QUELLE TECHNOLOGIE ?</h2>
+              <p>Pour scanner un site nous utilisons la technique dit de photogrammétrie. La photogrammétrie est une méthode qui utiliser la parallaxe entre 2 images. C'est une méthode précise, rapide et efficace qui permet de renconstituer en 3D et de texturés tout type de surface.</p>
+              <p>Grâce à cette technologie nous vous garantissons un gain en ressources important (Homme, temps, matériel).</p>
+              <p>La méthode d'acquisition consiste à photographier la zone ciblée via un drone avec un recoupement important entre les acquisitions. Nous adaptons la hauteur de vol en fonction de la précision souhaitée et nous posons des cibles au sol pour contraindre et vérifier le modèle 3D.</p>
+            </div>
+
+            <p><b>SCHEMA PROTOCOLE</b></p>
 
             <div class="crossbar-bot"></div>
 
@@ -267,5 +289,12 @@
 
     <!-- Custom JavaScript -->
     <script src="../../ressources/js/animations.js"></script>
+
+    <script type="text/javascript" src="../../ressources/js/jquery.imagezoom.js"></script>
+    <script>
+      $(window).on('load', function () {
+        $('.zoom').zoom();
+      });
+    </script>
   </body>
 </html>
