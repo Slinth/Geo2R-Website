@@ -8,8 +8,8 @@
     <!-- Google ReCaptcha -->
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="title" content="Geo2R - Votre spécialiste de l'imagerie technique par drone" />
@@ -155,8 +155,8 @@
                 <div class="invalid-feedback">Veuillez saisir un message.</div>
               </div>
             </div>
-            <div>
-              <div align="center" class="g-recaptcha" data-sitekey="6LdDrVoUAAAAAMUQ7DAGQN0YNFiKxjq4YCGR_Cka"></div>
+            <div class="captcha-holder">
+              <div class="g-recaptcha" data-sitekey="6LdDrVoUAAAAAMUQ7DAGQN0YNFiKxjq4YCGR_Cka"></div>
               <div class="invalid-feedback centered" id="captcha-feedback">Veuillez compléter la vérification anti-spam.</div>
             </div>
             <p><button type="submit" class="btn btn-orange" onclick="submitV2()">Envoyer</button></p>

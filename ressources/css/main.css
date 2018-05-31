@@ -31,6 +31,7 @@ video {
 .container {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  min-height: 350px;
 }
 
 /****** FOOTER ******/

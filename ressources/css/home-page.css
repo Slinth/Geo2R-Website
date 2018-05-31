@@ -17,6 +17,7 @@ h3 {
 
 .container {
   overflow: hidden !important;
+  min-height: auto !important;
 }
 
 /* Slideshow container */

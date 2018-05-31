@@ -76,6 +76,14 @@ h2 {
   padding-right: 1.5em;
 }
 
+.captcha-holder {
+  text-align: center;
+}
+
+.g-recaptcha {
+  display: inline-block;
+}
+
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   iframe {
     width: 100%

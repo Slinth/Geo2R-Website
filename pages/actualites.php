@@ -5,8 +5,8 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61470250-2"></script>
     <script src="../ressources/js/google-analytics.js"></script>
 
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="title" content="Geo2R - Votre spécialiste de l'imagerie technique par drone" />
@@ -29,10 +29,13 @@
     <?php }?>
 
     <!-- LinkedIn Sharing JavaScript -->
-    <script type="text/javascript" src="//platform.linkedin.com/in.js">
-      lang: fr_FR
-      api_key: 867iyvsbv3rjic
-      authorize: true
+    <script src="http://platform.linkedin.com/in.js?async=true"></script>
+    <script>
+      IN.init({
+        lang: fr_FR
+        api_key: 867iyvsbv3rjic
+        authorize: true
+      });
     </script>
 
     <link rel="icon" href="../ressources/images/logo.png">
@@ -177,7 +180,7 @@
             <li><a href="contact">Contact</a></li>
           </ul>
         </div>
-        <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="#">Mention légales</a></div>
+        <div class="col-12 legals">@2018 Geo2R Tous droits réservés | <a href="mentions-legales">Mention légales</a></div>
       </div>
     </footer>
 
