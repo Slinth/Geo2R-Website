@@ -20,7 +20,7 @@
     <meta property="og:type" content="Page de contact" />
     <meta property="og:url" content="http://www.geo2r.com/contact" />
     <meta property="og:image" content="http://www.geo2r.com/ressources/images/logo-geo2r-noir.jpg" />
-    <link rel="icon" href="../ressources/images/logo.png">
+    <link rel="icon" href="../ressources/images/logo-geo2r-carre.png">
 
     <title>Geo2R - Votre spécialiste de l'imagerie aérienne par Drone</title>
 

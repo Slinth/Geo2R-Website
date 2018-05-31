@@ -21,6 +21,7 @@
       if (isset($id)) {
         $actu = getActualiteById($id);
     ?>
+      <meta property="fb:app_id" content="411317722664907" />
       <meta property="og:title" content="<?php echo $actu['title'] ?>" />
       <meta property="og:description" content="<?php echo strip_tags($actu['content']); ?>"/>
       <meta property="og:type" content="Article" />
@@ -29,16 +30,16 @@
     <?php }?>
 
     <!-- LinkedIn Sharing JavaScript -->
-    <script src="http://platform.linkedin.com/in.js?async=true"></script>
+    <script src="//platform.linkedin.com/in.js?async=true"></script>
     <script>
       IN.init({
-        lang: fr_FR
-        api_key: 867iyvsbv3rjic
+        lang: "fr_FR",
+        api_key: "867iyvsbv3rjic",
         authorize: true
       });
     </script>
 
-    <link rel="icon" href="../ressources/images/logo.png">
+    <link rel="icon" href="../ressources/images/logo-geo2r-carre.png">
 
     <title>Geo2R - Votre spécialiste de l'imagerie aérienne par Drone</title>
 

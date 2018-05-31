@@ -1,30 +1,35 @@
 <?php
-    function apercuContenu ($origine) {
-      if (strlen ($origine) <= 200)
-          return $origine;
+  function strip_tags_content($text, $tags = '', $invert = FALSE) {
+    preg_match_all('/<(.+?)[\s]*\/?[\s]*>/si', trim($tags), $tags);
+    $tags = array_unique($tags[1]);
 
-      /*$debut = substr ($origine, 0, 400);
-      $debut = substr ($debut, 0, strrpos ($debut, ' ')) . '...';*/
-      $content = strip_tags($origine, '<h2><img><h3><p>');
-      $posFin = strpos($content, '</', 200);
-      $posDeb = strpos($content, '>', $posFin);
-      $fin = substr($content, $posFin, ($posDeb - $posFin) + 1);
-
-      $debut = substr($content, 0, $posFin);
-
-      return $debut.$fin;
+    if(is_array($tags) AND count($tags) > 0) {
+      if($invert == FALSE) {
+        return preg_replace('@<(?!(?:'. implode('|', $tags) .')\b)(\w+)\b.*?>.*?</\1>@si', '', $text);
+      }
+      else {
+        return preg_replace('@<('. implode('|', $tags) .')\b.*?>.*?</\1>@si', '', $text);
+      }
     }
-
-    function apercuContenu2 ($origine) {
-      if (strlen ($origine) <= 400)
-          return $origine;
-
-      $content = strip_tags($origine, '<h2><img><h3><p>');
-      $debut = substr ($content, 0, 400);
-      $debut = substr ($debut, 0, strrpos ($debut, ' ')) . '...';
-
-      return $debut;
+    elseif($invert == FALSE) {
+      return preg_replace('@<(\w+)\b.*?>.*?</\1>@si', '', $text);
     }
+    return $text;
+  }
+
+  function apercuContenu ($origine) {
+    if (strlen ($origine) <= 300)
+        return $origine;
+
+    $content = strip_tags_content($origine, '<h2><h3><p><strong>');
+    $posFin = strpos($content, '</', 300);
+    $posDeb = strpos($content, '>', $posFin);
+    $fin = substr($content, $posFin, ($posDeb - $posFin) + 1)."...";
+
+    $debut = substr($content, 0, $posFin);
+
+    return $debut.$fin;
+  }
 
   function getActualites() {
     include 'bdd.php';
