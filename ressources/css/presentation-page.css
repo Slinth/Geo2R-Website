@@ -31,15 +31,46 @@ h3 {
   margin-bottom: 3em;
 }
 
+.paragraph {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.paragraph::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /** Section Societe */
 .content img {
-  margin: auto;
-  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   margin-top: 2em;
+  display: inline-block;
+}
+
+.content .centered img {
+  width: 60%;
 }
 
 .content ul {
   list-style-type: circle;
+}
+
+.content img.left {
+  float: left;
+  margin: 0 1em 0 0;
+  max-width: 20%;
+  min-width: 10%;
+}
+
+.content img.right {
+  float: right;
+  margin: 0;
+  max-width: 20%;
+  min-width: 10%;
 }
 
 /** Section Equipe */
@@ -141,6 +172,7 @@ h3 {
 
 .banniere {
   height: 5em;
+  margin-top: 1em;
 }
 
 .banniere img {
@@ -174,6 +206,27 @@ h3 {
   .box {
     margin-top: 2em !important;
   }
+
+  .content img.left {
+    float: none !important;
+    max-width: 60% !important;
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+    margin-bottom: 1em !important;
+  }
+
+  .content img.right {
+    float: none !important;
+    max-width: 60% !important;
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+    margin-bottom: 1em !important;
+  }
+
+  .content .centered img {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
 }
 
 
@@ -185,5 +238,26 @@ h3 {
 
   .box {
     margin-top: 2em !important;
+  }
+
+  .content img.left {
+    float: none !important;
+    max-width: 70% !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+    margin-bottom: 1em !important;
+  }
+
+  .content img.right {
+    float: none !important;
+    max-width: 70% !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+    margin-bottom: 1em !important;
+  }
+
+  .content .centered img {
+    width: 100% !important;
+    margin-top: 0 !important;
   }
 }

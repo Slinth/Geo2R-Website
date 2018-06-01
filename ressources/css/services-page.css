@@ -22,6 +22,11 @@ h4 {
   margin: auto;
 }
 
+small {
+  color: var(--main-orange);
+  font-weight: bold;
+}
+
 /* 4 IMAGES */
 .icone {
   width: 4em;
@@ -96,7 +101,7 @@ h4 {
   float: right;
   margin: 0 0 0 1em;
   max-width: 40%;
-  min-width: 50%;
+  min-width: 20%;
 }
 
 .paragraph {
@@ -119,13 +124,31 @@ h4 {
   display: table;
 }
 
-
 .crossbar-bot {
   margin-top: 2em;
   margin-bottom: 2em;
   margin-left: 25%;
   margin-right: 25%;
   border-bottom: solid 1px var(--main-orange);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.box {
+  min-width: 250px;
+  flex: 1 1 250px;
+  text-align: center;
+  margin: 0;
+}
+
+.box img {
+  width: 100%;
 }
 
 /** SECTEURS */

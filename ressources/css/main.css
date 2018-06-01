@@ -10,7 +10,9 @@
 html {
   position: relative;
   height: 100%;
+  font-size: 0.9em;
 }
+
 body {
   width: 100%;
   display: flex;
