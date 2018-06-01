@@ -80,8 +80,11 @@ small {
 }
 
 .pictures .half {
-  width: 98%;
-  overflow: hidden;
+  width: 49%;
+}
+
+.pictures .half img {
+  width: 100%;
 }
 
 .pictures .main-image {
