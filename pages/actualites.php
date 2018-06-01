@@ -19,6 +19,7 @@
     <?php
       $id = $_GET['id'];
       if (isset($id)) {
+        $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $actu = getActualiteById($id);
     ?>
       <meta property="fb:app_id" content="411317722664907" />
@@ -115,7 +116,6 @@
       <div id="main" class="container">
         <?php
         if (isset($id)) {
-          $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"
           ?>
           <div class="actu">
             <h1><?php echo $actu['title'] ?></h1>
@@ -197,7 +197,7 @@
     <!-- jQuery local fallback -->
     <script>window.jQuery || (document.write('<script src="../ressources/js/jquery-3.2.1.min.js"><\/script>') && console.log("JQ : Local"))</script>
     <!-- Bootstrap JS local fallback -->
-    <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="../ressources/js/bootstrap.min.js"><\/script>');console.log("JS : Local");}</script>
+    <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="../ressources/js/popper.min.js"><\/script>');document.write('<script src="../ressources/js/bootstrap.min.js"><\/script>');console.log("JS : Local");}</script>
     <!-- Bootstrap CSS local fallback -->
     <script>
       (function($) {
@@ -230,5 +230,12 @@
       js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0&appId=411317722664907';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script>
+      if (typeof(IN) === 'undefined') {
+        console.log("IN : UNDEFINED");
+        $(".share-buttons").append('<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $actual_link ?>&source=LinkedIn" target="_blank">Partager sur LinkedIn</a>');
+      }
+    </script>
     </body>
   </html>
