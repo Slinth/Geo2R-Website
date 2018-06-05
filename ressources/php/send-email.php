@@ -19,7 +19,7 @@ $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?sec
 $responseKeys = json_decode($response,true);
 if(intval($responseKeys["success"]) !== 1) {
 	//Utilisateur non vérifié : on arrête
-  echo '<h2>You are spammer ! Get the @$%K out</h2>';
+  echo '<h2>You are spammer !</h2>';
 	exit;
 } else {
   //Utilisateur vérifié : envoi du mail

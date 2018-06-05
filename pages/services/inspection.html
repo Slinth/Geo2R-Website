@@ -130,6 +130,7 @@
 
         <div class="crossbar-bot"></div>
 
+<!-- ------------------------------- DEBUT CONTENU (ancre)-->
         <div class="row">
           <div class="d-none d-md-block col-md-2 col-lg-2"></div>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 content justified">
@@ -156,7 +157,7 @@
                 <a href="../../ressources/images/inspection-thermo-reseau.jpg" class="half" onclick="window.open(this.href); return false;"><img src="../../ressources/images/inspection-thermo-reseau.jpg" alt="Inspection Thermique Reseau souterrain"></a>
               </div>
             </div>
-
+<!-- ------------------------------- FIN CONTENU -->
             <div class="crossbar-bot"></div>
 
             <div class="paragraph text-center">
@@ -270,5 +271,12 @@
 
     <!-- Custom JavaScript -->
     <script src="../../ressources/js/animations.js"></script>
+
+    <script src="../../ressources/js/jquery.imagezoom.js"></script>
+    <script>
+      $(window).on('load', function () {
+        $('.zoom').zoom();
+      });
+    </script>
   </body>
 </html>

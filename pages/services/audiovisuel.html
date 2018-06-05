@@ -130,11 +130,12 @@
 
         <div class="crossbar-bot"></div>
 
+<!-- ------------------------------- DEBUT CONTENU (ancre)-->
         <div class="row">
           <div class="d-none d-md-block col-md-2 col-lg-2"></div>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 content justified">
             <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/C47elkucics" style="border:0" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/C47elkucics" allowfullscreen></iframe>
             </div>
 
             <div class="paragraph">
@@ -151,7 +152,7 @@
                 <a href="../../ressources/images/exemple-mise-valeur.jpg" onclick="window.open(this.href); return false;"><img src="../../ressources/images/exemple-mise-valeur.jpg" class="main-image" alt="Exemple Prise de vue"></a>
               </div>
             </div>
-
+<!-- ------------------------------- FIN CONTENU -->
             <div class="crossbar-bot"></div>
 
             <div class="paragraph text-center">
@@ -265,5 +266,12 @@
 
     <!-- Custom JavaScript -->
     <script src="../../ressources/js/animations.js"></script>
+
+    <script src="../../ressources/js/jquery.imagezoom.js"></script>
+    <script>
+      $(window).on('load', function () {
+        $('.zoom').zoom();
+      });
+    </script>
   </body>
 </html>
