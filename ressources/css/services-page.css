@@ -79,16 +79,14 @@ small {
   margin-bottom: 1em;
 }
 
-.pictures .half {
-  width: 48%;
+.pictures a, figure {
+  min-width: 0;
+  flex: 1;
 }
 
-.pictures .half img {
-  width: 100%;
-}
-
-.pictures .main-image {
-  max-width: 100%;
+.pictures img {
+  max-width: 99%;
+  min-width: 33%;
   height: auto;
   flex: 1 1 auto;
   margin: 0 auto;
@@ -144,25 +142,6 @@ small {
   margin-left: 25%;
   margin-right: 25%;
   border-bottom: solid 1px var(--main-orange);
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.box {
-  min-width: 250px;
-  flex: 1 1 250px;
-  text-align: center;
-  margin: 0;
-}
-
-.box img {
-  width: 100%;
 }
 
 /** SECTEURS */

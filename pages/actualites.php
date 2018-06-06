@@ -22,12 +22,12 @@
         $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $actu = getActualiteById($id);
     ?>
-      <meta property="fb:app_id" content="411317722664907" />
+      <meta property="fb:app_id" content="211215429486478" />
       <meta property="og:title" content="<?php echo $actu['title'] ?>" />
       <meta property="og:description" content="<?php echo strip_tags($actu['content']); ?>"/>
       <meta property="og:type" content="Article" />
-      <meta property="og:url" content="http://dev.geo2r.fr/actualites?id=<?php echo $id ?>" />
-      <meta property="og:image" content="http://dev.geo2r.fr/ressources/images/logo-geo2r-noir.jpg" />
+      <meta property="og:url" content="http://www.geo2r.com/actualites?id=<?php echo $id ?>" />
+      <meta property="og:image" content="http://www.geo2r.com/ressources/images/logo-geo2r-noir.jpg" />
     <?php }?>
 
     <!-- LinkedIn Sharing JavaScript -->

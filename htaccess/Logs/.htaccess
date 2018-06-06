@@ -1,0 +1,65 @@
+AuthUserFile /home/georcomogd/www/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Acces Restreint : site en developpement"
+AuthType Basic
+require valid-user
+
+# BEGIN Cleaning URLs
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+	
+	RewriteBase /
+	
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d
+	RewriteRule .* - [L]
+		
+	RewriteCond %{REQUEST_URI} !^administrator/
+	RewriteRule ^(.*)$ /pages/$1 [L,QSA]
+</IfModule>
+
+
+# END Cleaning URLs
+
+# BEGIN Redirection
+Redirect 301 /nos-drones http://geo2r.com/presentation/materiel
+#Redirect 301 /presentation/societe http://geo2r.com/presentation
+#Redirect 301 /presentation/materiels http://geo2r.com/presentation
+#Redirect 301 /presentation/reglementation http://geo2r.com/presentation
+#Redirect 301 /formulaire-de-devis http://geo2r.com/contact
+#Redirect 301 /blog-nord-pas-de-calais-picardie http://geo2r.com/actualites
+#Redirect 301 /batiments-travaux-publics/40-integration-3d#ancre http://geo2r.com/services/integration3d
+#Redirect 301 /batiments-travaux-publics/reconstitution-3d#ancre http://geo2r.com/services/modelisation3d
+#Redirect 301 /batiments-travaux-publics/analyse-thermique-des-batiments-et-detection-d-infiltration#ancre http://geo2r.com/services/inspection
+#Redirect 301 /batiments-travaux-publics/suivi-de-chantier#ancre http://geo2r.com/services/inspection
+#Redirect 301 /batiments-travaux-publics/inspection-ouvrages-batiments#ancre http://geo2r.com/services/inspection
+#Redirect 301 /industrie/cartographie-de-site-industriel#ancre http://geo2r.com/services/cartographie
+#Redirect 301 /industrie/20-secteur-minier#ancre http://geo2r.com/services/cartographie
+#Redirect 301 /industrie/reconstitution-en-3d#ancre http://geo2r.com/services/reconstitution3d
+#Redirect 301 /industrie/inspection-thermique#ancre http://geo2r.com/services/inspection
+#Redirect 301 /industrie/inspection-site-industriel#ancre http://geo2r.com/services/inspection
+#Redirect 301 /energie/parc-photovoltaique#ancre http://geo2r.com/services/inspection
+#Redirect 301 /energie/parc-eolien#ancre http://geo2r.com/services/inspection
+#Redirect 301 /energie/suivi-de-chantier-photovoltaique-ou-eolien#ancre http://geo2r.com/services/inspection
+#Redirect 301 /urbanisme-collectivite/inspection-infrastructure#ancre http://geo2r.com/services/inspection
+#Redirect 301 /urbanisme-collectivite/cartographie-2d-3d#ancre http://geo2r.com/services/cartographie
+#Redirect 301 /urbanisme-collectivite/manifestation-evenementiel-communication#ancre http://geo2r.com/services/audiovisuel
+#Redirect 301 /communication/audiovisuel#ancre http://geo2r.com/services/audiovisuel
+#Redirect 301 /communication/inspection-site-industriel#ancre http://geo2r.com/services/audiovisuel
+#Redirect 301 /agriculture/degats-gibiers#ancre http://geo2r.com/services/inspection
+#Redirect 301 /agriculture/cartes-de-biomasse#ancre http://geo2r.com/services/cartographie
+#Redirect 301 /services/travaux-publics http://geo2r.com/
+#Redirect 301 /services/industrie http://geo2r.com/
+#Redirect 301 /services/energie http://geo2r.com/
+#Redirect 301 /services/urbanisme http://geo2r.com/
+#Redirect 301 /services/communication http://geo2r.com/services/audiovisuel
+#Redirect 301 /services/agriculture http://geo2r.com/
+
+
+# END Redirection
+
+# BEGIN Adding Types
+AddType video/ogg  .ogv
+AddType video/mp4  .mp4
+AddType video/webm .webm
+# END Adding Types
