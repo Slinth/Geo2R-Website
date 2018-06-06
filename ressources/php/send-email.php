@@ -42,7 +42,7 @@ if(intval($responseKeys["success"]) !== 1) {
 		$passage_ligne = "\n";
 	}
 	//=====Déclaration du message au format HTML.
-	$message_html = "<html><head></head><body><b>Demande de contact</b> : $nom $prenom ($email | $tel)<br/>
+	$message_html = "<html><head></head><body><b>Demande de contact</b> : $prenom $nom ($email | $tel)<br/>
 	                  <b>Message :</b> $mess</body></html>";
 	//==========
 
@@ -57,8 +57,8 @@ if(intval($responseKeys["success"]) !== 1) {
 	//=========
 
 	//=====Création du header de l'e-mail.
-	$header = "From: \"$nom $prenom\" <$email>".$passage_ligne;
-	$header.= "Reply-to: \"$nom $prenom\" <$email>".$passage_ligne;
+	$header = "From: \"$prenom $nom\" <$email>".$passage_ligne;
+	$header.= "Reply-to: \"$prenom $nom\" <$email>".$passage_ligne;
 	$header.= "MIME-Version: 1.0".$passage_ligne;
 	$header.= "Content-Type: multipart/mixed;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 	//==========

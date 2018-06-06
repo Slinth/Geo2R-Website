@@ -25,6 +25,10 @@ h3 {
   width: 100%;
 }
 
+video {
+
+}
+
 .container {
   overflow: hidden !important;
   min-height: auto !important;
