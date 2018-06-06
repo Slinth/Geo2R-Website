@@ -1,0 +1,217 @@
+/** Content PAGE PRESENTATION */
+.container {
+  overflow: auto;
+  text-align: justify;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  font-weight: 500;
+  line-height: 3rem;
+  color: var(--main-orange);
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--main-light-orange);
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.centered ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.centered ul li {
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  border-bottom: dotted 1px var(--main-light-orange);
+}
+
+.centered ul li.orange {
+  color: var(--main-orange);
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+img.portrait {
+  width: 90%;
+  height: auto;
+  margin-top: 1em;
+  border-radius: 15%;
+}
+
+.centered {
+  text-align: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.section {
+  margin-bottom: 3em;
+}
+
+.col-lg-4.cross-bar, .col-md-4.cross-bar {
+  border-top: solid 1px var(--main-orange);
+  margin-top: 1.5em;
+  padding-left: 0em !important;
+  padding-right: 0em !important;
+}
+
+.cross-bar.left {
+  margin-left: 3em !important;
+}
+
+.cross-bar.right {
+  margin-right: 3em !important;
+}
+
+.col-lg-4.center, .col-md-4.center {
+  margin-left: -3em !important;
+  margin-right: -3em !important;
+}
+
+#toBeHidden {
+  visibility: hidden;
+  padding-top: 5em;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .col-lg-4.center, .col-md-4.center {
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+  }
+  .cross-bar.left {
+    margin-left: 0em !important;
+  }
+
+  .cross-bar.right {
+    margin-right: 0em !important;
+  }
+
+  img.portrait {
+    width: 60%;
+    height: auto;
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .col-lg-4.center, .col-md-4.center {
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+  }
+
+  img.portrait {
+    width:55%;
+    height: auto;
+    margin-top: 1em;
+  }
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  .col-lg-4.center, .col-md-4.center {
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+  }
+
+  img.portrait {
+    width:50%;
+    height: auto;
+    margin-top: 1em;
+  }
+}
+
+
+
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+{
+
+	/* Turns off styling - not usually needed, but good to know. */
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	/* gets rid of default border in Firefox and Opera. */
+	border: none;
+
+	/* Needs to be in here for Safari polyfill so background images work as expected. */
+	background-size: auto;
+
+	/* Dimensions */
+	width: 100%;
+	height: 5px;
+
+}
+
+/* Polyfill */
+progress[role]:after {
+	background-image: none; /* removes default background from polyfill */
+}
+
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+	display: none;
+}
+
+progress,                          /* Firefox  */
+progress[role][aria-valuenow] {    /* Polyfill */
+   background: transparent !important; /* !important is needed by the polyfill */
+   border-radius: 2px !important;
+}
+
+/* IE10 */
+progress {
+    color: var(--main-orange);
+    border-radius: 2px !important;
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+    background: var(--main-orange);
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 2px !important;
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: var(--main-orange);
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 2px !important;
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: var(--main-orange);
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 2px !important;
+}
+
+.navbar {
+  margin-bottom: -15px !important;
+}
+
+.navbar-collapse {
+  margin-top: 10px !important;
+}
+
+.navbar-brand img.small {
+  width: auto;
+  height: 3.5rem;
+}

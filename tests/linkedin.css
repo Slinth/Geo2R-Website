@@ -1,0 +1,21 @@
+.LI-badge-container.vertical.dark .LI-profile-pic-container {
+    background-color: #f4712d !important;
+    background-image: none !important;
+}
+
+.LI-badge-container.vertical.dark a.LI-view-profile, .LI-badge-container.vertical.dark a:visited.LI-view-profile {
+  background-color: #f4712d !important;
+  border-color: #f4712d !important;
+}
+
+.LI-badge-container.vertical.dark .LI-field a.hover, .LI-badge-container.vertical.dark .LI-field a:hover, .LI-badge-container.vertical.dark .LI-field a.focus, .LI-badge-container.vertical.dark .LI-field a:focus {
+  color: #f4712d !important;
+}
+
+.LI-badge-container.vertical.dark .LI-name a.hover, .LI-badge-container.vertical.dark .LI-name a:hover, .LI-badge-container.vertical.dark .LI-name a.focus, .LI-badge-container.vertical.dark .LI-name a:focus {
+  color: #f4712d !important;
+}
+
+.LI-badge-container.vertical.dark {
+  background-color: #3d3d3d !important;
+}

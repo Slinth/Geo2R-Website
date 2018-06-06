@@ -1,0 +1,363 @@
+h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  margin-bottom: 2rem !important;
+  font-weight: 500;
+  line-height: 3rem;
+  color: var(--main-orange);
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--main-light-orange);
+}
+
+.container {
+  overflow: hidden !important;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  overflow: hidden !important;
+}
+
+.slideshow-container img {
+  height: 25em;
+}
+
+/* Hide the images by default */
+.slideshow-container .mySlides {
+  display: none;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.slideshow-container .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.slideshow-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.slideshow-container .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: var(--main-light-orange) !important;
+}
+
+/* Caption text */
+.slideshow-container .text {
+  color: var(--main-orange);
+  font-size: 1em;
+  position: absolute;
+  padding: 0.3em 0;
+  bottom: 2em;
+  width: 14%;
+  text-align: center;
+  margin-left: 41.5%;
+  background-color: var(--main-dark);
+}
+
+.slideshow-container .text a {
+  color: inherit;
+}
+
+/* Number text (1/3 etc) */
+.slideshow-container .numbertext {
+  color: var(--main-light-orange);
+  font-size: 0.9em;
+  position: relative;
+  width: 6%;
+  margin-left: 47%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot-container {
+  text-align: center;
+  margin-top: 0.7em;
+  margin-bottom: 1em;
+}
+
+.dot-container .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  opacity: 0.8;
+}
+
+.dot-container .active {
+  background-color: var(--main-orange);
+}
+
+.dot-container .dot:hover {
+  background-color: var(--main-light-orange);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+
+.bg-black {
+  background-color: #3b4041;
+  margin-bottom: 1em;
+}
+
+/* Morph */
+.morph {
+  overflow: hidden !important;
+  height: 34em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.morph #image {
+  position: absolute;
+  z-index: 900;
+  width: 100%;
+}
+
+.morph #image img {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.morph .round:hover {
+  border-radius: 15%;
+  transition: all 300ms ease-in-out;
+  /*-webkit-transform: rotate(360deg) !important;
+  transform: rotate(360deg) !important;*/
+}
+
+.morph .round div.before {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.morph .round div.after {
+  display: none;
+  font-size: 1.2em;
+}
+
+.morph .round:hover div.before {
+  display: none;
+}
+
+.morph .round:hover div.after {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.morph .round:hover div.after ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.morph .round:hover div.after ul li {
+  border: 0px;
+}
+
+.round {
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  text-align: center;
+  color: white;
+  opacity: 0.9;
+}
+
+#first {
+  background-color: #60c4b4;
+}
+
+#second {
+  background-color: #f4722a;
+}
+
+#third {
+  background-color: #9cb3b3;
+}
+
+#fourth {
+  background-color: #f9972d;
+}
+
+#fifth {
+  background-color: #5fc491;
+}
+
+.foreground {
+  z-index: 920;
+  display: inline-block;
+}
+
+.references {
+  position: relative;
+  margin: auto;
+  overflow: hidden !important;
+}
+
+.references img {
+  width: auto;
+  height: inherit;
+  margin: auto;
+  max-width: 100%;
+}
+
+.references .vertical-align {
+  display: flex;
+  flex-direction: row;
+  height: 5em;
+}
+
+.references .vertical-align > [class^="col-"],
+.references .vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .slideshow-container img {
+    height: 20em;
+  }
+
+  .slideshow-container .text {
+    font-size: 0.9em;
+    width: 14%;
+    margin-left: 41%;
+  }
+  .round {
+    width: 13em !important;
+    height: 13em !important;
+  }
+
+  .morph {
+    height: 30em !important;
+  }
+
+  .references .vertical-align {
+    display: flex;
+    flex-direction: row;
+    height: 6em;
+  }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 768px) {
+  .slideshow-container img {
+    height: 13em;
+  }
+
+  .slideshow-container .text {
+    font-size: 0.8em;
+    width: 18%;
+    margin-left: 39%;
+  }
+
+  .slideshow-container .numbertext {
+    font-size: 0.7em;
+    width: 10%;
+    margin-left: 45%;
+  }
+  .round {
+    width: 12em !important;
+    height: 12em !important;
+  }
+
+  .morph {
+    height: 40em !important;
+  }
+
+  .references .vertical-align {
+    display: flex;
+    flex-direction: row;
+    height: 5em;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 574px) {
+  .slideshow-container img {
+    height: 10em !important;
+  }
+
+  .slideshow-container .text {
+    font-size: 0.7em !important;
+    width: 16% !important;
+    margin-left: 39% !important;
+  }
+
+  .slideshow-container .numbertext {
+    font-size: 0.6em !important;
+    width: 8% !important;
+    margin-left: 46% !important;
+  }
+
+  .round {
+    width: 11em !important;
+    height: 11em !important;
+  }
+
+  .morph {
+    height: 59em !important;
+  }
+
+  .references .vertical-align {
+    display: flex;
+    flex-direction: row;
+    height: 5em;
+  }
+
+  h2 {
+    text-decoration: underline;
+  }
+}

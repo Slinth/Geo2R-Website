@@ -1,4 +1,13 @@
+#AuthType Basic
+#AuthName "Restricted Content"
+#AuthUserFile /www/tmp/.htpasswd
+#Require valid-user 
+
+AuthUserFile /home/georcomogd/www/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Acces Restreint : site en developpement"
 AuthType Basic
-AuthName "Restricted Content"
-AuthUserFile C:/wamp/www/v2/.htpasswd
-Require valid-user 
+require valid-user
+
+
+

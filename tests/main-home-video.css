@@ -1,0 +1,258 @@
+:root {
+  --main-dark: #3d3d3d;
+  --main-orange: #f4712d;
+  --main-light-orange: #f9ae85;
+}
+
+.container {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  width: 100%;
+  margin-bottom: 15rem;
+  display: inline-block;
+}
+
+/****** FOOTER ******/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin-top:-15rem;
+  line-height: 15rem;
+  background-color: var(--main-dark);
+}
+
+.legals {
+  display: inline;
+}
+
+
+/****** HEADER ******/
+
+/* BANNIERE */
+.baniere {
+  margin: auto;
+  max-width: 100%;
+  height: 25rem;
+  display: block;
+}
+
+/* VIDEO */
+.video {
+  max-width: 100%;
+  padding: 0;
+  padding-top: 40%!important;
+  position: relative;
+}
+
+.video iframe, .video object, .video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50rem;
+    border: 0;
+    margin-top: -5rem;
+}
+
+/* BARRES DE NAVIGATION */
+.bg-dark {
+  background-color: var(--main-dark) !important;
+}
+
+.navbar {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+/* ----------------------------Design page Contact ------------------------------------ */
+.test {
+  padding-left: 12em;
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+  margin-left: 3rem;
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+  height: 5rem;
+  width: auto;
+}
+/* ----------------------------------------------------------------------------------------- */
+
+.nav-item {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--main-orange) !important;
+}
+
+.navbar-title {
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-media {
+      display: none !important;
+  }
+
+  .navbar-title {
+      display: inline !important;
+  }
+
+  /* Design page Contact */
+  .test{
+    padding-left: 3em;
+  }
+
+  .test2 {
+    margin-left: 31em;
+  }
+
+  .test3 {
+    margin-top: 3em !important;
+    margin-bottom: 1em !important;
+  }
+
+  .logo {
+    margin-left: 2em !important;
+  }
+
+  /* Design page Cartographie */
+  .justify-content-md-center {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .navbar-brand {
+    margin-left: 0 !important;
+  }
+}
+
+.navbar-media {
+    float: right;
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--main-light-orange) !important;
+ }
+
+.social-network {
+  border: solid 2px white;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.social-network:hover {
+  border: solid 2px var(--main-orange);
+}
+
+.navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 1rem;
+}
+
+/* Premiere barre */
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active {
+  background-color: var(--main-orange);
+  color: white;
+}
+
+/* Deuxieme barre */
+.navbar-dark .navbar-nav .nav-link {
+  color: lightgrey;
+}
+
+.navbar-dark .navbar-title {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active {
+  background-color: var(--main-orange);
+  color: white;
+}
+
+.container-title {
+  background-color: var(--main-orange) !important;
+  position: relative;
+  display: inline-block;
+  line-height: 3rem;
+  color: white;
+  min-width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+
+/** GESTION NAVIGATION ANCRES PRESENTATION */
+#societe:before {
+    display: block;
+    content: "";
+    height: 5em;
+    margin: -5em 0 0;
+}
+#equipe:before {
+    display: block;
+    content: "";
+    height: 5em;
+    margin: -5em 0 0;
+}
+#drones:before {
+    display: block;
+    content: "";
+    height: 5em;
+    margin: -5em 0 0;
+}
+#reglementation:before {
+    display: block;
+    content: "";
+    height: 5em;
+    margin: -5em 0 0;
+}
+
+.header-home {
+  height: 50vh;
+  display: block;
+}
+
+.fluid-width-video-wrapper {
+    padding: 0;
+    width: 100%;
+    position: relative;
+    padding-top: 25% !important;
+}
+
+.fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    border: 0;
+}

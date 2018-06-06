@@ -1,0 +1,56 @@
+/*[data-aos="fade-left"] {
+  border-radius: 50%;
+  background: red;
+  transform: rotate(0deg);
+  transition-property: border-radius, background, transform;
+}
+
+[data-aos="fade-left"].aos-animate:hover {
+    border-radius: 25% !important;
+    background: yellow !important;
+    -webkit-transform: rotate(360deg) !important;
+    transform: rotate(360deg) !important;
+}
+*/
+
+/* Morph */
+.morph .round span.after {
+  display: none;
+}
+
+.morph .round:hover {
+  border-radius: 25%;  /* on arrondit l'image */
+  -webkit-transform: rotate(360deg) !important; /* rotation de l'image */
+  transform: rotate(360deg) !important;
+}
+
+.morph .round:hover span.before {
+  display: none;
+}
+
+.morph .round:hover span.after {
+  display: block;
+}
+
+.round {
+  border-radius: 50%;
+  width: 20em;
+  height: 20em;
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  text-align: center;
+}
+
+#first {
+  background-color: red;
+}
+
+#second {
+  background-color: blue;
+}
+
+#third {
+  background-color: green;
+}

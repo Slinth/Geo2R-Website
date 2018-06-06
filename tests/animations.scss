@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: black;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
+
+/* Animations */
+
+[data-aos="example-anim1"] {
+  transform: skewX(45deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="example-anim1"].aos-animate {
+  transform: skewX(0);
+  opacity: 1;
+}
+
+[data-aos="example-anim2"] {
+  background: red;
+  transition-property: background;
+}
+
+[data-aos="example-anim2"].aos-animate {
+    background: blue;
+}
+
+[data-aos="example-anim2"]:hover {
+  background: blue;
+  transition-property: background;
+}
+
+[data-aos="example-anim2"]:hover.aos-animate {
+    background: yellow;
+}
+
+[data-aos="example-anim3"] {
+  transform: rotate(360deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="example-anim3"].aos-animate {
+    transform: rotate(0);
+    opacity: 1;
+}
