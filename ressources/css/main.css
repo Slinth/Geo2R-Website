@@ -218,8 +218,8 @@ video {
   border: solid 2px white;
   padding: 5px;
   border-radius: 25px;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.8em;
+  height: 1.8em;
 }
 
 .icon-network:hover {
@@ -491,8 +491,8 @@ header .navbar-collapse {
     border: solid 2px white;
     padding: 5px;
     border-radius: 25px;
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.6em;
+    height: 1.6em;
   }
 
   .navbar-brand {

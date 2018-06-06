@@ -1,13 +1,3 @@
-/*$('#videoId').on('loadstart', function (event) {
-   $(this).addClass('loading');
-   console.log("LOADING");
- });
- $('#videoId').on('canplay', function (event) {
-   $(this).removeClass('loading');
-   $(this).attr('poster', '');
-   console.log("END");
- });
-*/
 var slideIndex = 0;
 carousel();
 

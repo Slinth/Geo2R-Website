@@ -34,18 +34,19 @@
 
   <body>
     <div class="wrapper">
-        <video id="videoId" preload="auto" loop="loop" autoplay="autoplay" poster="../ressources/images/poster.jpg" onloadeddata="this.play();">
+        <video id="videoId" preload="auto" loop="loop" controls="true" autoplay="autoplay" muted poster="../ressources/images/poster.jpg" onloadeddata="this.play();">
             <source src="../ressources/videos/video-720P-25.webm" type="video/webm">
             <source src="../ressources/videos/video-720P-25.ogv" type="video/ogv">
             <source src="../ressources/videos/video-720P-25.mp4" type="video/mp4">
            Your browser does not support the video tag.
         </video>
+        <!--<div class="banniere"><img src="../ressources/images/banniere-plaquette.jpg" alt="banniere plaquette"></div>-->
 
         <div class="message">SITE EN COURS DE DEVELOPPEMENT<br/>Fin des travaux très prochainement<br/>Merci de votre compréhension</div>
         <!-- Dark navbar -->
         <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" id="navbar">
           <a class="navbar-brand" href="#">
-            <img src="../../ressources/images/logo-geo2r-blanc-small.png" id="navbarBrand" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
+            <img src="../ressources/images/logo-geo2r-blanc-small.png" id="navbarBrand" class="d-inline-block align-top" alt="Geo2R - Imagerie aérienne par Drone">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -123,14 +124,14 @@
               <div class="vertical-align">
                 <h4>ECONOMIE</h4>
               </div>
-              <p>Homme, temps, matériels...</p>
+              <p>Hommes, temps, matériel...</p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 centered" data-aos="fade-left" data-aos-anchor=".wrapper">
               <img src="../../ressources/images/icon-lock.png" class="icone" alt="Icone Lock">
               <div class="vertical-align">
                 <h4>SECURITE</h4>
               </div>
-              <p>Zone à risque : accès difficile, travaux en hauteur...</p>
+              <p>Zones à risques : accès difficile, travaux en hauteur...</p>
             </div>
             <div class="d-none d-lg-block col-lg-2"></div>
           </div>
@@ -150,7 +151,7 @@
                         <li>Toiture / cheminée</li>
                         <li>Ouvrage d'art</li>
                         <li>Infrastructure</li>
-                        <li>Solaire / éolien / énergies</li>
+                        <li>Solaire / Eolien / Energies</li>
                       </ul>
                     </div>
                   </div>
@@ -165,8 +166,8 @@
                     <div class="before">Cartographie</div>
                     <div class="after">
                       <ul>
-                        <li>Orthophotoplan géoréférencé</li>
-                        <li>Modèle numérique de terrain et/ou de surface</li>
+                        <li>Orthophotoplan géoréférencé,</li>
+                        <li>Modèle numérique de terrain et/ou de surface,</li>
                         <li>Modèle numérique d'altitude</li>
                       </ul>
                     </div>
@@ -201,7 +202,7 @@
                   <div class="before">Intégration 3D</div>
                   <div class="after">
                     <ul>
-                      <li>Intégration dans l'environnement réel</li>
+                      <li>Intégration dans l'environnement réel,</li>
                       <li>Promotion de projets architecturaux</li>
                     </ul>
                   </div>
@@ -218,8 +219,8 @@
                   <div class="after">
                     <ul>
                       <li>Relevé de l'existant</li>
-                      <li>Diagnostiques travaux</li>
-                      <li>Plan toiture / façade...</li>
+                      <li>Diagnostics travaux</li>
+                      <li>Plan toitures / façades...</li>
                     </ul>
                   </div>
                 </div>
@@ -395,6 +396,7 @@
     </script>
 
     <!-- Custom JavaScript -->
+    <script>$('#videoId')[0].play();</script>
     <script src="../ressources/js/animations.js"></script>
     <script src="../ressources/js/home-page.js"></script>
   </body>

@@ -90,15 +90,7 @@
       <div class="container-title"><h1>PRESENTATION</h1></div>
 
       <main class="container">
-        <div class="row">
-          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left" data-aos="slide-right" data-aos-anchor=".container-title" data-aos-duration="300"  data-aos-easing="ease-in-sine" data-aos-delay="200"></div>
-          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
-            <h2><a id="Procedure"></a>PROCEDURE</h2>
-          </div>
-          <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right" data-aos="slide-left" data-aos-anchor=".container-title" data-aos-duration="300"  data-aos-easing="ease-in-sine" data-aos-delay="200"></div>
-        </div>
-        <div class="d-none d-md-block banniere"><img src="../ressources/images/banniere-presentation.png" alt="Réseau Entreprendre Hainaut"></div>
-        <div class="d-md-none d-lg-none banniere"><img src="../ressources/images/banniere-presentation-carree.png" alt="Réseau Entreprendre Hainaut"></div>
+        <div id="toBeHidden"></div>
         <div id="societe" class="section">
           <div class="row">
             <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left" data-aos="slide-right" data-aos-anchor="#societe" data-aos-duration="300"  data-aos-easing="ease-in-sine" data-aos-delay="200"></div>
@@ -109,22 +101,17 @@
           </div>
           <div class="content">
             <div class="paragraph">
-              <h3>Notre Objectif : Répondre au plus juste à vos attentes</h3>
               <p>Implantée dans le nord de la France, Geo2R est une entreprise d'imagerie aérienne technique par drone et de post-traitement des données.</p>
               <a href="../ressources/images/laureat-reseau-hainaut.png" onclick="window.open(this.href); return false;"><img class="right" src="../ressources/images/laureat-reseau-hainaut.png" alt="Reseau entreprendre hainaut"></a>
               <p>La société est spécialisée dans les domaines techniques suivants :</p>
               <ul>
-                <li><a id="Cartographie"></a>CARTOGRAPHIE (relevé simple et complexe, topographie, modèle numérique de surface, orthophotoplan de précision...)</li>
+                <li><a id="Cartographie"></a>CARTOGRAPHIE (relevé simple et complexe, topographie, Modèle Numérique de Surface, orthophotoplan de précision...)</li>
                 <li><a id="Inspection"></a>INSPECTION (industrie, bâtiment, énergies, collectivités...)</li>
                 <li><a id="Modélisation3D"></a>MODÉLISATION 2D & 3D (industrie, bâtiment, énergies, collectivités...)</li>
                 <li><a id="Intégration3D"></a>INTÉGRATION 3D (architectes, promoteurs, bâtiment...)</li>
                 <li><a id="Audiovisuel"></a>AUDIOVISUEL (vidéos et photos promotionnelles, mise en valeur, réalité virtuelle...)</li>
               </ul>
               <p>GEO2R accompagne les entreprises et les collectivités dans chacun de leurs projets et intervient sur le territoire français et européen.</p>
-            </div>
-
-            <div class="centered">
-              <a href="../ressources/images/schema-solutions.png" onclick="window.open(this.href); return false;"><img src="../ressources/images/schema-solutions.png" alt="Schema solutions services"></a>
             </div>
           </div>
         </div>
@@ -160,8 +147,31 @@
               </ul>
             </div>
           </div>
+        </div>
 
+        <div id="procedure" class="section">
+          <div class="row">
+            <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left" data-aos="slide-right" data-aos-anchor=".container-title" data-aos-duration="300"  data-aos-easing="ease-in-sine" data-aos-delay="200"></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
+              <h2><a id="Procedure"></a>PROCEDURE</h2>
+            </div>
+            <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right" data-aos="slide-left" data-aos-anchor=".container-title" data-aos-duration="300"  data-aos-easing="ease-in-sine" data-aos-delay="200"></div>
+            <div class="d-none d-md-block banniere"><img src="../ressources/images/banniere-presentation.png" alt="Réseau Entreprendre Hainaut"></div>
+            <div class="d-md-none d-lg-none banniere"><img src="../ressources/images/banniere-presentation-carree.png" alt="Réseau Entreprendre Hainaut"></div>
+          </div>
+        </div>
 
+        <div id="solutions" class="section">
+          <div class="row">
+            <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar left" data-aos="slide-right" data-aos-anchor=".container-title" data-aos-duration="300"  data-aos-easing="ease-in-sine" data-aos-delay="200"></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
+              <h2><a id="Solutions"></a>NOS SOLUTIONS</h2>
+            </div>
+            <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right" data-aos="slide-left" data-aos-anchor=".container-title" data-aos-duration="300"  data-aos-easing="ease-in-sine" data-aos-delay="200"></div>
+            <div class="centered">
+              <a href="../ressources/images/schema-solutions.png" onclick="window.open(this.href); return false;"><img src="../ressources/images/schema-solutions.png" alt="Schema solutions services"></a>
+            </div>
+          </div>
         </div>
 
         <div id="reglementation" class="section">
@@ -173,7 +183,7 @@
             <div class="d-none d-md-block col-lg-4 col-md-4 cross-bar right" data-aos="slide-left" data-aos-anchor="#reglementation" data-aos-duration="300"  data-aos-easing="ease-in-sine" data-aos-delay="200"></div>
           </div>
           <div class="content">
-            <p>Vous devez savoir que la réalisation de prises de vues aériennes avec des aéronefs télépilotés est extrêmement encadrée par la DGAC (Direction Générale de l’Aviation Civil).</p>
+            <p>La réalisation de prises de vues aériennes avec des aéronefs télépilotés est extrêmement encadrée par la DGAC (Direction Générale de l’Aviation Civil).</p>
             <p>Cette réglementation est encadrée par un certain nombre de conditions légales comme : <b>« l’arrêté du 11 avril 2012 relatif à l’utilisation de l’espace aérien par les aéronefs qui circulent sans personne à bord »</b> consultable directement <a href="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000025834953">ICI</a></p>
 
             <p>Ce qu’il faut RETENIR pour pouvoir exercer dans le secteur du drone :</p>
@@ -182,7 +192,7 @@
               <li>Dépôt d'un Manuel d’activité particulière (MAP), document à rédiger intégralement par les candidats, complexe et fastidieux.</li>
               <li>Obtention d'une attestation de conformité pour votre / vos aéronefs, soit auprès du fabricant, soit établie par vous-même s'il s'agit d'une construction amateur sans numéro de série.</li>
               <li>Déclaration de conformité de l'exploitant qui certifie avoir satisfait à toutes les exigences réglementaires</li>
-              <li>Une DNC (déclaration de niveau de compétence du télépilote) délivrée auprès d'une école de pilotage.</li>
+              <li>Une DNC (Déclaration de Niveau de Compétence du télépilote) délivrée auprès d'une école de pilotage.</li>
               <li>Une déclaration d'activité de photographie cinématographie aérienne à adresser à la PAF (Police de l'Air et des Frontières) avant chaque mission.</li>
               <li>Un contrat d'assurance en responsabilité civile spécifique aux activités aériennes</li>
             </ul>

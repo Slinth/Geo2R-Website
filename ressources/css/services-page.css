@@ -82,6 +82,7 @@ small {
 .pictures a, figure {
   min-width: 0;
   flex: 1;
+  text-align: center;
 }
 
 .pictures img {
@@ -90,10 +91,6 @@ small {
   height: auto;
   flex: 1 1 auto;
   margin: 0 auto;
-}
-
-.pictures a {
-  text-align: center;
 }
 
 .pictures figcaption {
@@ -192,15 +189,7 @@ small {
 }
 
 .lateral-menu {
-    left: auto;
-    background-color: transparent;
-    transition: 0.3s;
-    position: fixed;
-    top: 40%;
-    margin-bottom: 60px;
-    transform: translateY(-50%);
-    height: 0;
-    z-index: 1;
+    display: flex;
 }
 
 .fixedContainer {
@@ -220,8 +209,16 @@ small {
 }
 
 @media only screen and (min-width: 501px) and (max-width: 768px) {
+  .zoomCaption {
+      display: none !important;
+  }
+
   .lateral-menu {
-    display: none;
+    display: none !important;
+  }
+
+  .row {
+    justify-content: center !important;
   }
 
   .fixedContainer {
@@ -251,8 +248,12 @@ small {
 
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
+  .zoomCaption {
+      display: none !important;
+  }
+
   .lateral-menu {
-    display: none;
+    display: none !important;
   }
 
   .fixedContainer {

@@ -132,7 +132,7 @@
 
 <!-- ------------------------------- DEBUT CONTENU (ancre)-->
         <div class="row">
-          <div class="d-none d-md-block col-md-2 col-lg-2"></div>
+          <div class="lateral-menu d-none d-md-block col-md-2 col-lg-2"></div>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 content justified">
             <div class="video-container">
               <iframe src="https://www.youtube.com/embed/C47elkucics" allowfullscreen></iframe>
@@ -150,7 +150,7 @@
               <h2>SUIVI DE CHANTIER</h2>
               <p>Une prise de vue sur votre chantier en phase de démarrage, en-cours ou fini, nous adaptons nos solutions en fonction de vos attentes.</p>
               <p>L’avantage majeur du suivi de chantier par drone réside principalement dans le contrôle expert et rigoureux de l’<b>évolution</b> du chantier. En effet par sa rapidité d’exécution et la précision de son pilotage, le drone permet la prise de relevés réguliers, des plans de vols automatisés et peut intervenir en cas d’urgence pour contrôler les zones à risques et difficiles d’accès.</p>
-              <p>Nos interventions vous  ferons gagner en ressources (homme, temps, matériel) et vous fera faire des économies.</p>
+              <p>Nos interventions vous feront gagner en ressources (homme, temps, matériel) et vous feront faire des économies.</p>
             </div>
 <!-- ------------------------------- FIN CONTENU -->
             <div class="crossbar-bot"></div>
@@ -270,7 +270,9 @@
     <script src="../../ressources/js/jquery.imagezoom.js"></script>
     <script>
       $(window).on('load', function () {
-        $('.zoom').zoom();
+        if ($(window).width() > 768) {
+          $('.zoom').zoom();
+        }
       });
     </script>
   </body>

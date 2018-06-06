@@ -132,11 +132,11 @@
 
 <!-- ------------------------------- DEBUT CONTENU (ancre)-->
         <div class="row">
-          <div class="d-none d-md-block col-md-2 col-lg-2"></div>
+          <div class="lateral-menu d-none d-md-block col-md-2 col-lg-2"></div>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 content justified">
             <div class="paragraph">
               <p>Combiner la maquette numérique 3D avec les images haute résolution permet de générer des données inédites, de gagner du temps sur les chantiers et de sécuriser les opérations en évitant des interventions humaines périlleuses.</p>
-              <p>Grâce à nos outils et services il vous suffit de nous confier votre ou vos besoin(s) et nous vous remettrons l’ensemble des informations qui vous intéressent. Nous vous donnerons accès à des outils de mesure et d’annotation, et vous pourrez facilement échanger les résultats avec vos collaborateurs ou partenaires.</p>
+              <p>Grâce à nos outils et services il vous suffit de nous confier vos besoins et nous vous remettrons l’ensemble des informations qui vous intéressent. Nous vous donnerons accès à des outils de mesure et d’annotation, et vous pourrez facilement échanger les résultats avec vos collaborateurs ou partenaires.</p>
               <p>Nous créons des modèles 3D texturés de tous types d’ouvrages ou d’infrastructures comme :</p>
               <ul>
                 <li>Ouvrage d’art</li>
@@ -155,7 +155,7 @@
             </div>
 
             <div class="paragraph">
-              <p>Contrairement au scanner, nous pouvons intervenir dans des zones difficiles d’accès sur les extérieurs et texturer le modèle via les photos sources géotaggées.</p>
+              <p>Contrairement au scanner, nous pouvons intervenir dans des zones difficiles d’accès sur les extérieurs et texturer le modèle via les photos sources géotaguées.</p>
               <p>Cette solution technologique a de multiples applications : </p>
                 <ul>
                   <li>BIM (modélisation et numérisation de l’enveloppe extérieure des bâtiments)</li>
@@ -167,7 +167,7 @@
                 </ul>
             </div>
 
-            <small>Passez votre curseur sur la photo pour obtenir un zoom de la zone (un temps de chargement pour la haute qualité peut être requis)</small>
+            <small class="zoomCaption">Passez votre curseur sur la photo pour obtenir un zoom de la zone (un temps de chargement pour la haute qualité peut être requis)</small>
             <div class="pictures">
               <div data-zoom="../../ressources/images/facade-chateau.jpg" class="zoom">
                 <img src="../../ressources/images/facade-chateau-small.jpg" alt="Inspection facade">
@@ -177,7 +177,7 @@
             <div class="paragraph">
               <h2>DOMAINES D'APPLICATIONS</h2>
               <p><b>Patrimoine : </b> bâtiment historique, projet de rénovation, inspection</p>
-              <p><b>BTP : </b> modèle numérique de surface (ou terrain), zone de stockage, terrassement, modélisation intégrale d'un bâtiment existant sur son enveloppe extérieur</p>
+              <p><b>BTP : </b> Modèle Numérique de Surface (ou Terrain), zone de stockage, terrassement, modélisation intégrale d'un bâtiment existant sur son enveloppe extérieure</p>
               <p><b>Architecture : </b> bâtiment existant, intégration de projet</p>
               <p><b>Géologie : </b> modélisation des reliefs, falaises, crevasses pour inspection et/ou étude d'érosion</p>
               <p><b>Topographie : </b> pré-étude des infrastructures avant rénovation, mesures, scan de zone difficile d'accès</p>
@@ -185,7 +185,7 @@
 
             <div class="paragraph">
               <h2>COMMENT / QUELLE TECHNOLOGIE ?</h2>
-              <p>Pour scanner un site ou un ouvrage, nous utilisons la technique dite de photogrammétrie. La photogrammétrie est une méthode qui utilise la parallaxe entre 2 images, c’est une méthode précise, rapide et efficace qui permet de reconstituer en 3D et de texturer tout type de surface.</p>
+              <p>Pour scanner un site ou un ouvrage, nous utilisons la technique dite de photogrammétrie. La photogrammétrie est une méthode qui utilise la parallaxe entre 2 images, c’est une méthode précise, rapide et efficace qui permet de reconstituer en 3D et de texturer tous types de surface.</p>
             </div>
 
             <div class="paragraph">
@@ -195,7 +195,7 @@
               <p>Inspecter une toiture, mesurer l’avancement d’un chantier par une vue d’ensemble ou détaillée, faire les métrés d’un façade avant réhabilitation… Le drone trouve des applications dans bien des missions…</p>
               <div class="pictures">
                 <figure>
-                  <figcaption>ORTHOPHOTOPLAN (assemblage et reconstitution de plusieurs images aériennes géotaggées)</figcaption>
+                  <figcaption>ORTHOPHOTOPLAN (assemblage et reconstitution de plusieurs images aériennes géotaguées)</figcaption>
                   <a href="../../ressources/images/orthophotoplan-modelisation.png" onclick="window.open(this.href); return false;"><img src="../../ressources/images/orthophotoplan-modelisation.png" alt="Orthophotoplan modélisation3D"></a>
                 </figure>
                 <figure>
@@ -323,7 +323,9 @@
     <script src="../../ressources/js/jquery.imagezoom.js"></script>
     <script>
       $(window).on('load', function () {
-        $('.zoom').zoom();
+        if ($(window).width() > 768) {
+          $('.zoom').zoom();
+        }
       });
     </script>
   </body>

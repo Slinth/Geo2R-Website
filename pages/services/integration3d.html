@@ -132,7 +132,7 @@
 
 <!-- ------------------------------- DEBUT CONTENU (ancre)-->
         <div class="row">
-          <div class="d-none d-md-block col-md-2 col-lg-2"></div>
+          <div class="lateral-menu d-none d-md-block col-md-2 col-lg-2"></div>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 content justified">
             <div class="video-container">
               <iframe src="https://www.youtube.com/embed/kG40Jvkw5F4" allowfullscreen></iframe>
@@ -145,7 +145,7 @@
                 <li>Ouvrage d’art</li>
                 <li>Bâtiment public ou privé</li>
                 <li>Infrastructure</li>
-                <li>Voiries</li>
+                <li>Voirie</li>
               </ul>
             </div>
 
@@ -158,18 +158,18 @@
                 <a href="../../ressources/images/integration-apres.jpg" onclick="window.open(this.href); return false;"><img src="../../ressources/images/integration-apres.jpg" alt="Exemple intégration 3D"></a>
               </div>
 
+              <small>Déplacez le curseur pour observer l'intégration de bâtiments dans l'environnement réaliste</small>
               <div class="video-container d-none d-md-block">
                 <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1836ddc6-6964-11e8-b263-0edaf8f81e27"></iframe>
               </div>
-              <!-- https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f6cabd8-6965-11e8-b263-0edaf8f81e27-->
 
               <p>Pour un niveau de réalisme unique, nous pouvons animer les maquettes et plans de masse en y intégrant des personnages mobiles, des véhicules, de la végétation et de l’équipement urbain.</p>
-              <p>Nous répondons avec vous sur vos phases concours, marché public ou privé, projet d’extension.</p>
-              <p>Contactez nous, nous étudierons ensemble vos besoins et saurons répondre à vos attentes.</p>
+              <p>Nous répondons avec vous sur vos phases concours, marchés publics ou privés, projets d’extension.</p>
+              <p>Contactez-nous !</p>
             </div>
 
             <div class="pictures">
-              <a href="../../ressources/images/integration-schema.PNG" onclick="window.open(this.href); return false;"><img src="../../ressources/images/integration-schema.PNG" alt="Schéma intégration"></a>
+              <a href="../../ressources/images/integration-schema.jpg" onclick="window.open(this.href); return false;"><img src="../../ressources/images/integration-schema.png" alt="Schéma intégration"></a>
             </div>
 <!-- ------------------------------- FIN CONTENU -->
             <div class="crossbar-bot"></div>
@@ -289,7 +289,9 @@
     <script src="../../ressources/js/jquery.imagezoom.js"></script>
     <script>
       $(window).on('load', function () {
-        $('.zoom').zoom();
+        if ($(window).width() > 768) {
+          $('.zoom').zoom();
+        }
       });
     </script>
   </body>

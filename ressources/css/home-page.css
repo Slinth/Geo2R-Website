@@ -25,8 +25,11 @@ h3 {
   width: 100%;
 }
 
-video {
-
+.banniere {
+  margin: 0 !important;
+}
+.banniere img {
+  width: 100%;
 }
 
 .container {
