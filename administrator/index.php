@@ -17,11 +17,30 @@
     <link href="../ressources/css/main.css" rel="stylesheet">
     <link href="../ressources/css/actualites-page.css" rel="stylesheet">
 
+    <style>
+      .right {
+        float: right;
+        color: red;
+        margin-right: 20px;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      h1 {
+        margin-top: 0;
+        text-align: center;
+        color: orange;
+      }
+    </style>
+
     <!-- JQuery JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <!-- Script PHP / JS -->
     <?php include('../ressources/php/get-actualites.php'); ?>
+    <?php include('session.php'); ?>
     <?php
       if (isset($_GET['success'])) {
         $success = $_GET['success'];
@@ -41,7 +60,10 @@
 
   <body>
       <div id="main" class="container">
-        <a href="ajouter-actualite">NOUVELLE ACTUALITE</a><br/>
+        <h1>Coucou <?php echo $login_session;?> !</h1>
+        <a href="ajouter-actualite">NOUVELLE ACTUALITE</a> ||
+        <a href="signup.php" style="color: green">Nouvel utilisateur</a>
+        <a href="logout.php" class="right">Déconnexion</a>
         <table>
         <?php $actus = getFullActualites();
           if (count($actus) > 0) {
