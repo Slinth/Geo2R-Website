@@ -74,15 +74,9 @@ small {
 .pictures {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 1em;
-}
-
-.pictures a, figure {
-  min-width: 0;
-  flex: 1;
-  text-align: center;
 }
 
 .pictures img {
@@ -91,6 +85,12 @@ small {
   height: auto;
   flex: 1 1 auto;
   margin: 0 auto;
+}
+
+.pictures a, figure {
+  min-width: 0;
+  flex: 1 1 auto;
+  text-align: center;
 }
 
 .pictures figcaption {
@@ -197,8 +197,17 @@ small {
     top: 37%;
 }
 /* --- */
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .zoomCaption {
+      display: none !important;
+  }
+}
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
+  .zoomCaption {
+      display: none !important;
+  }
+
   .lateral-menu {
     display: none;
   }

@@ -1,13 +1,13 @@
 <?php
-   include("config.php");
+   include("../ressources/php/bdd.php");
    $error = "";
    session_start();
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']);
+      $myusername = mysqli_real_escape_string($connection,$_POST['username']);
+      $mypassword = mysqli_real_escape_string($connection,$_POST['password']);
 
-      $stmt = $db->prepare("SELECT id, password FROM admin WHERE username = ?");
+      $stmt = $connection->prepare("SELECT id, password FROM admin WHERE username = ?");
       $stmt->bind_param("s", $myusername);
       $stmt->execute();
       $stmt->store_result();

@@ -77,6 +77,10 @@ h3 {
   min-width: 10%;
 }
 
+.content span {
+  color: var(--main-orange);
+}
+
 /** Section Equipe */
 .flex-container {
   display: flex;
